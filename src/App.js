@@ -2,16 +2,29 @@ import './App.css';
 import Clusters from './Components/Clusters';
 import Header from './Components/Header';
 import Home from './Pages/Home';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      {/* routes */}
-      <Header />
-      <Home />
-      {/*  */}
-      <Clusters />
       
+      <Router>
+        <Header />
+        
+        <Switch>
+
+          <Route exact path="/">
+            <Home />
+            <Clusters />
+          </Route>
+
+        </Switch>
+
+      </Router>
     </div>
   );
 }
