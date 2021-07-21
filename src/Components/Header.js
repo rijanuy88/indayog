@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './Header.css'
 
 function Header() {
@@ -12,7 +13,7 @@ function Header() {
             {/* clickables */}
             <div className="header_right">
                 <h3>Home</h3>
-                <h3>Clusters</h3>
+                <h3><Link activeClass="active" to="secondInsideContainer" spy={true} smooth={true} duration={250} containerId="containerElement" style={{ display: 'inline-block', margin: '20px' }}>Clusters</Link></h3>
                 <h3>Schedule</h3>
                 <h3>SAMAHAN TV</h3>
                 <h3>Fiesta TWG</h3>

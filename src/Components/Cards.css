@@ -1,19 +1,26 @@
-.cards {
-    display: block
+.cards {}
+
+.cards>h4 {
+    /* overlap */
+    position: absolute;
+    text-align: center;
 }
 
 .cards>#card {
-    display: flex;
-    width: 370px;
-    height: 550px;
-    /* padding: 20px; */
+    /* base of overlap */
+    position: relative;
     border: none;
-    border-radius: 20px;
+    border-radius: 2vh;
     /* avoid distorted images */
     object-fit: contain;
+    margin-left: 2vh;
+    margin-top: 2vh;
+    text-align: center;
+
 
 }
 
 .cards>h4 {
     z-index: 1;
+
 }

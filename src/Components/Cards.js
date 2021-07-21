@@ -8,14 +8,17 @@ function Cards({img, alt,title}) {
     root: {
         // maxWidth: 345,
         maxWidth: 345,
-        maxHeight: 145,
+        maxHeight: 345,
+        width: 275,
+        height:350,
+        
     },
     });
     const classes = useStyles();
     return (
         <div className="cards">
-            <h4>{title}</h4>
             <Card className={classes.root} id='card'>
+                <h4>{title}</h4>
                 <CardActionArea>
                     <CardMedia
                     component="img"

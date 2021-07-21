@@ -7,6 +7,7 @@ import {
   Switch,
   Route
 } from "react-router-dom";
+import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
 
 function App() {
   return (
@@ -19,11 +20,15 @@ function App() {
 
           <Route exact path="/">
             <Home />
-            <Clusters />
+            <Element name="secondInsideContainer" style={{
+              marginBottom: '200px'
+            }}><Clusters />
+            </Element>
+            
           </Route>
 
         </Switch>
-
+        
       </Router>
     </div>
   );
