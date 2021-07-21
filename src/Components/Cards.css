@@ -1,4 +1,6 @@
-.cards {}
+.cards {
+    
+}
 
 .cards>h4 {
     /* overlap */
@@ -16,11 +18,5 @@
     margin-left: 2vh;
     margin-top: 2vh;
     text-align: center;
-
-
-}
-
-.cards>h4 {
-    z-index: 1;
-
+    
 }
