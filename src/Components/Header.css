@@ -1,0 +1,17 @@
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+.header_right{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+.header_right >h3{
+    padding-right: 10px;
+}
+.header_left{
+    text-align: center;
+}

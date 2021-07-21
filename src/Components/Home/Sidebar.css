@@ -1,0 +1,12 @@
+.sidebar {
+    display: grid;
+    flex: 0.2;
+}
+
+.sidebar_top {
+    text-align: center;
+}
+
+.sidebar_bottom {
+    text-align: center;
+}

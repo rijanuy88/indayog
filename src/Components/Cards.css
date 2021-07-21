@@ -1,0 +1,19 @@
+.cards {
+    display: block
+}
+
+.cards>#card {
+    display: flex;
+    width: 370px;
+    height: 550px;
+    /* padding: 20px; */
+    border: none;
+    border-radius: 20px;
+    /* avoid distorted images */
+    object-fit: contain;
+
+}
+
+.cards>h4 {
+    z-index: 1;
+}

@@ -1,0 +1,13 @@
+.home {
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.home_body {
+    flex: 0.8;
+    text-align: center;
+}
+
+.home_chart {
+    display: flex;
+}

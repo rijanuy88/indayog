@@ -1,0 +1,10 @@
+.clusters {
+    display: flex;
+    padding: 20px;
+}
+
+.clusters_images {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    justify-content: space-between;
+}
