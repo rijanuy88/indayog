@@ -1,5 +1,5 @@
 import React from 'react'
-import Cards from './Cards'
+import Cards from '../Components/Cards'
 import './Clusters.css'
 
 function Clusters() {

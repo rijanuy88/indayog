@@ -1,35 +1,12 @@
 import './App.css';
-import Clusters from './Components/Clusters';
+import Clusters from './Pages/Clusters';
 import Navbar from './Components/Navbar';
 import Home from './Pages/Home';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route
-} from "react-router-dom";
-import { Link, DirectLink, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
+import TWG from './Pages/TWG';
 
 function App() {
   return (
     <div className="App">
-      
-      {/* <Router>
-        <Header />
-        
-        <Switch>
-
-          <Route exact path="/">
-            <Home />
-            <Element name="secondInsideContainer" style={{
-              marginBottom: '200px'
-            }}><Clusters />
-            </Element>
-            
-          </Route>
-
-        </Switch>
-        
-      </Router> */}
       <main id='home'>
             <Navbar />
             <section className='home'>
@@ -46,6 +23,7 @@ function App() {
             </section>
             <section className='fiestaTWG' id='fiestaTWG'>
                 <h1>Fiesta TWG</h1>
+                <TWG />
             </section>
             <section className='rest'></section>
         </main>

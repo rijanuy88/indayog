@@ -1,0 +1,18 @@
+.profiles>h4 {
+    /* overlap */
+    position: absolute;
+    text-align: center;
+}
+
+.profiles>#card {
+    /* base of overlap */
+    position: relative;
+    border: none;
+    border-radius: 2vh;
+    /* avoid distorted images */
+    object-fit: contain;
+    margin-left: 2vh;
+    margin-top: 2vh;
+    text-align: center;
+
+}

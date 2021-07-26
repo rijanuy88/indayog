@@ -1,38 +1,34 @@
-import CardMedia from '@material-ui/core/CardMedia';
 import React from 'react'
+import './Profiles.css'
+import CardMedia from '@material-ui/core/CardMedia';
 import { Card, CardActionArea, makeStyles } from '@material-ui/core';
-import './Cards.css'
 
-function Cards({img, alt,title}) {
+
+
+function Profiles({img, alt, name,position}) {
     const useStyles = makeStyles({
         root: {
-            // maxWidth: 345,
             maxWidth: 345,
-            maxHeight: 345,
-            width: 275,
-            height:350,
-            
         },
     });
-
     const classes = useStyles();
     return (
-        <div className="cards">
+        <div className='profiles'>
             <Card className={classes.root} id='card'>
-                <h4>{title}</h4>
                 <CardActionArea>
                     <CardMedia
                     component="img"
                     alt={alt}
-                    height="140"
+                    height="345"
                     image={img}
-                    title={title}
+                    title={name}
                     />
                 </CardActionArea>
+                <h4>{name}</h4>
+                <h4>{position}</h4>
             </Card>
         </div>
-        
-    );
+    )
 }
 
-export default Cards;
+export default Profiles

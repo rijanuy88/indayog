@@ -1,5 +1,4 @@
 import React from 'react'
-// import logo from './logo.svg'
 import { links } from '../data'
 import './Navbar.css'
 
@@ -20,10 +19,8 @@ const Navbar = () => {
     return (
         <nav className='navbar sticky'>
             <div className='nav-center'>
-                {/* <img src={logo} alt='smooth scroll' /> */}
                 <div className="header_left">
-                    <h2>INDAYOG 2021</h2>
-                    <h4>73rd Ateneo Fiesta</h4>
+                    <a>INDAYOG 2021 <br></br>73rd Ateneo Fiesta </a>
                 </div>
                 <div className="header_right">
                 {links.map((link) => {
