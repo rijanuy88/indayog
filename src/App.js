@@ -1,6 +1,6 @@
 import './App.css';
 import Clusters from './Components/Clusters';
-import Header from './Components/Header';
+import Navbar from './Components/Navbar';
 import Home from './Pages/Home';
 import {
   BrowserRouter as Router,
@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="App">
       
-      <Router>
+      {/* <Router>
         <Header />
         
         <Switch>
@@ -29,7 +29,26 @@ function App() {
 
         </Switch>
         
-      </Router>
+      </Router> */}
+      <main id='home'>
+            <Navbar />
+            <section className='home'>
+                <Home />
+            </section>
+            <section className='clusters' id='clusters'>
+                <Clusters />
+            </section>
+            <section className='schedule' id='schedule'>
+                <h1>Schedule</h1>
+            </section>
+            <section className='samahanTv' id='samahanTv'>
+                <h1>SAMAHAN TV</h1>
+            </section>
+            <section className='fiestaTWG' id='fiestaTWG'>
+                <h1>Fiesta TWG</h1>
+            </section>
+            <section className='rest'></section>
+        </main>
     </div>
   );
 }

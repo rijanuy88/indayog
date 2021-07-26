@@ -1,17 +1,22 @@
-.header{
+.nav-center {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 20px;
 }
-.header_right{
+
+.header_right {
     display: flex;
     align-items: center;
     padding: 20px;
 }
-.header_right >h3{
+
+.header_right>a {
     padding-right: 10px;
+    text-decoration: none;
+    color: black;
 }
-.header_left{
+
+.header_left {
     text-align: center;
 }
