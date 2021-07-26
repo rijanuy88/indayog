@@ -1,0 +1,11 @@
+.schedule{
+    display: flex;
+    
+}
+.schedule_left {
+    flex: 0.2;
+}
+
+.schedule_right {
+    flex: 0.8;
+}

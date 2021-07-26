@@ -1,0 +1,6 @@
+.episode{
+    display: flex;
+}
+.episode_right{
+    display: grid;
+}

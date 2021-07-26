@@ -20,7 +20,7 @@ const Navbar = () => {
         <nav className='navbar sticky'>
             <div className='nav-center'>
                 <div className="header_left">
-                    <a>INDAYOG 2021 <br></br>73rd Ateneo Fiesta </a>
+                    <a href='#home' key='1' onClick={handleClick}>INDAYOG 2021 <br></br>73rd Ateneo Fiesta </a>
                 </div>
                 <div className="header_right">
                 {links.map((link) => {
