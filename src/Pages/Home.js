@@ -5,12 +5,15 @@ import Sidebar from '../Components/Home/Sidebar'
 import ImageGallery from 'react-image-gallery';
 import "react-image-gallery/styles/css/image-gallery.css";
 import Charts from '../Components/Home/Charts';
+import sample from '../Assets/Photos/0o32014/one.jpeg'
 
 function Home() {
     // image gallery
     const images = [
         {
-            original: 'https://picsum.photos/id/1018/1000/600/',
+            // original: 'https://picsum.photos/id/1018/1000/600/',
+            // original: `src: ${sample}`,
+            original: `${sample}`,
             thumbnail: 'https://picsum.photos/id/1018/250/150/',
         },
         {
