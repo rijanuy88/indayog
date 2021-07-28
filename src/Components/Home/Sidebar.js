@@ -1,5 +1,6 @@
 import React from 'react'
 import './Sidebar.css'
+import Tweets from './Tweets'
 
 function Sidebar() {
     
@@ -16,6 +17,7 @@ function Sidebar() {
             <div className="sidebar_bottom">
                 {/* SAMAHAN Twitter Tweets */}
                 <h4>SAMAHAN Twitter Tweets</h4>
+                <Tweets />
             </div>
         </div>
     )
