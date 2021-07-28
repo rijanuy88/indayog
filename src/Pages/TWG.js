@@ -12,7 +12,6 @@ function TWG() {
                 {TwgData.map((twg) => {
                     return (
                         <Profiles img={twg.img} alt={twg.alt} name={twg.name} position={twg.position} />
-                    
                     )
                 })}
                 
