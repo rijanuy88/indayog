@@ -13,6 +13,7 @@
 }
 
 .home_gallery{
-    max-width: 1020px;
+    /* max-width: 1020px; */
+    max-width: 80vw;
     align-content: center;
 }

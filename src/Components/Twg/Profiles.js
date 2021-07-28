@@ -3,8 +3,6 @@ import './Profiles.css'
 import CardMedia from '@material-ui/core/CardMedia';
 import { Card, CardActionArea, makeStyles } from '@material-ui/core';
 
-
-
 function Profiles({img, alt, name,position}) {
     const useStyles = makeStyles({
         root: {
