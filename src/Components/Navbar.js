@@ -23,13 +23,13 @@ const Navbar = () => {
                     <a href='#home' key='1' onClick={handleClick}>INDAYOG 2021 <br></br>73rd Ateneo Fiesta </a>
                 </div>
                 <div className="header_right">
-                {links.map((link) => {
-                    return (
-                    <a href={link.url} key={link.id} onClick={handleClick}>
-                        {link.text}
-                    </a>
-                    )
-                })}
+                    {links.map((link) => {
+                        return (
+                        <a href={link.url} key={link.id} onClick={handleClick}>
+                            {link.text}
+                        </a>
+                        )
+                    })}
                 </div>
             </div>
         </nav>

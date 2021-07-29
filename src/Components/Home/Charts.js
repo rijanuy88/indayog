@@ -11,7 +11,7 @@ export default class Charts extends Component {
             id: 'apexchart-example'
             },
             xaxis: {
-            categories: [1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999]
+            categories: ["Acc", "BM", "CS", "HumLet", "NSM", "SEA", "SOE", "SON", "SS"]
             }
         },
         series: [{
