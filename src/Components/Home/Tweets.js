@@ -11,7 +11,8 @@ function Tweets() {
                 screenName: 'addusamahan'
             }}
             options={{
-                height: '800'
+                height: '800',
+                // theme: "dark",
             }}
             />
         </div>
