@@ -6,11 +6,11 @@ import './Cards.css'
 function Cards({img, alt,title}) {
     const useStyles = makeStyles({
         root: {
-            // maxWidth: 345,
             maxWidth: 345,
-            maxHeight: 345,
+            // maxHeight: 345,
             width: 275,
-            height:350,
+            // height:350,
+            
             
         },
     });
@@ -22,11 +22,11 @@ function Cards({img, alt,title}) {
                 <h4>{title}</h4>
                 <CardActionArea>
                     <CardMedia
-                    component="img"
-                    alt={alt}
-                    height="140"
-                    image={img}
-                    title={title}
+                        component="img"
+                        alt={alt}
+                        height="140"
+                        image={img}
+                        title={title}
                     />
                 </CardActionArea>
             </Card>
