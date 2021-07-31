@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: local('Montserrat'), url(../Assets/Fonts/Montserrat-Regular.otf) format('otf');
+    /* other formats include: 'woff2', 'truetype, 'opentype',
+                            'embedded-opentype', and 'svg' */
+}
+
 .navbar {
     background-image: linear-gradient(to right, #2A5CB5, #D51E49);
 }
@@ -18,7 +25,9 @@
 .header_right>a {
     padding-right: 10px;
     text-decoration: none;
-    color: black;
+    font-weight: 600;
+    color: white;
+    
 
 }
 
@@ -30,6 +39,6 @@
     color: black;
 }
 
-.header_le>img{
+.header_le>img {
     padding-left: 94px;
 }

@@ -1,9 +1,8 @@
 .clusters {
     display: grid;
-    grid-template-columns: auto auto;
     padding: 20px;
-    padding-top: 202px;
-    padding-bottom: 225px;
+    /* padding-top: 202px; */
+    padding-bottom: 67px;
     /* padding-left: 245px;
     padding-right: 245px; */
 }
@@ -13,11 +12,11 @@
     justify-content: space-between;
 }
 
-.clusters>h2 {
-    /* width: 786px;
+.clusters_lower>h2 {
+    width: 786px;
     height: 52px;
     left: 567px;
-    top: 899px; */
+    top: 899px;
 
     font-family: Montserrat;
     font-style: normal;
@@ -29,11 +28,11 @@
     color: #661693;
 }
 
-.clusters>h3 {
-    /* width: 786px;
+.clusters_lower>h3 {
+    width: 786px;
     height: 52px;
     left: 567px;
-    top: 899px; */
+    top: 899px;
 
     font-family: Montserrat;
     font-style: normal;
@@ -41,4 +40,9 @@
     font-size: 50px;
     line-height: 61px;
     text-align: center;
+}
+
+.clusters_lower {
+    justify-content: center;
+    align-items: center;
 }

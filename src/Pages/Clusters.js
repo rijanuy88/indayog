@@ -17,7 +17,6 @@ function Clusters() {
                 })}
                 
             </div>
-            
             <div className="clusters_lower">
                 <h2>INDAYOG 2021 CLUSTERS</h2>
                 <h3>73rd Ateneo Fiesta</h3>

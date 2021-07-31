@@ -1,6 +1,7 @@
-.twg{
+.twg {
     padding-top: 196px;
 }
+
 .twg_images {
     display: grid;
     grid-template-columns: auto auto auto auto auto;
@@ -9,5 +10,8 @@
 }
 
 .twg>h1 {
+    font-family: Boldstrom;
     text-align: center;
+    color: white;
+    font-size: xx-large;
 }

@@ -1,0 +1,24 @@
+.event {
+    display: flex;
+
+}
+
+.event>img {
+    width: 58px;
+    height: 58px;
+    border-radius: 10px;
+}
+
+.event_details {
+    display: grid;
+    font-family: Monteserrat;
+    line-height: 1;
+    text-align: left;
+    padding-left: 15px;
+}
+
+.event_details>h4 {}
+
+.event_details>h5 {
+    color: #AAAAAA;
+}
