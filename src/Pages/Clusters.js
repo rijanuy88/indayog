@@ -15,6 +15,12 @@ function Clusters() {
                         <Cards img={cluster.img} alt={cluster.alt} title={cluster.title} />
                     )
                 })}
+                
+            </div>
+            
+            <div className="clusters_lower">
+                <h2>INDAYOG 2021 CLUSTERS</h2>
+                <h3>73rd Ateneo Fiesta</h3>
             </div>
             
         </div>

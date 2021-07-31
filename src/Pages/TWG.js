@@ -8,7 +8,7 @@ function TWG() {
     return (
         <div className='twg'>
             <h1>Meet the Team Behind Indayog 2021</h1>
-            <div className="clusters_images">
+            <div className="twg_images">
                 {TwgData.map((twg) => {
                     return (
                         <Profiles img={twg.img} alt={twg.alt} name={twg.name} position={twg.position} />

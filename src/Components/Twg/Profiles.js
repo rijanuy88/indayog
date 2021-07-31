@@ -22,9 +22,14 @@ function Profiles({img, alt, name,position}) {
                     title={name}
                     />
                 </CardActionArea>
+                
+            </Card>
+            
+            <div className="profiles_dets">
                 <h4>{name}</h4>
                 <h4>{position}</h4>
-            </Card>
+            </div>
+
         </div>
     )
 }

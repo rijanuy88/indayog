@@ -6,10 +6,10 @@ import './Cards.css'
 function Cards({img, alt,title}) {
     const useStyles = makeStyles({
         root: {
-            maxWidth: 345,
+            // maxWidth: 345,
             // maxHeight: 345,
-            width: 275,
-            // height:350,
+            width: 134,
+            height:567,
             
             
         },
@@ -19,12 +19,12 @@ function Cards({img, alt,title}) {
     return (
         <div className="cards">
             <Card className={classes.root} id='card'>
-                <h4>{title}</h4>
+                {/* <h4>{title}</h4> */}
                 <CardActionArea>
                     <CardMedia
                         component="img"
                         alt={alt}
-                        height="140"
+                        height="667"
                         image={img}
                         title={title}
                     />

@@ -1,3 +1,13 @@
-.twg > h1{
+.twg{
+    padding-top: 196px;
+}
+.twg_images {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    /* display: flex; */
+    /* justify-content: space-between; */
+}
+
+.twg>h1 {
     text-align: center;
 }

@@ -8,7 +8,7 @@
   box-sizing: border-box;
 }
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
@@ -206,11 +206,11 @@ a {
 }
 
 .home {
-  background: #bee5bf;
+  background: #B2C1F8;
 }
 
 .clusters {
-  background: #dff3e3;
+  background: rgb(255, 255, 255);
 }
 
 .schedule {
@@ -224,6 +224,10 @@ a {
 .sticky {
   position: sticky;
   top: 0;
+}
+
+.fiestaTWG {
+  background: #A981BA;
 }
 
 @media screen and (min-width: 768px) {

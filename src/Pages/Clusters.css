@@ -1,10 +1,40 @@
 .clusters {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto auto;
     padding: 20px;
 }
 
 .clusters_images {
-    display: grid;
-    grid-template-columns: auto auto auto auto auto;
+    display: flex;
     justify-content: space-between;
+}
+
+.clusters>h2 {
+    /* width: 786px;
+    height: 52px;
+    left: 567px;
+    top: 899px; */
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 50px;
+    line-height: 61px;
+    text-align: center;
+
+    color: #661693;
+}
+
+.clusters>h3 {
+    /* width: 786px;
+    height: 52px;
+    left: 567px;
+    top: 899px; */
+
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 50px;
+    line-height: 61px;
+    text-align: center;
 }
