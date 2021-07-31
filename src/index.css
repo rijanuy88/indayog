@@ -160,7 +160,8 @@ a {
 
 .navbar {
   background: var(--white);
-  height: 64px;
+  /* height: 64px; */
+  height: 133px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -227,7 +228,7 @@ a {
 }
 
 .fiestaTWG {
-  background: #A981BA;
+  background: #DB6A96;
 }
 
 @media screen and (min-width: 768px) {
