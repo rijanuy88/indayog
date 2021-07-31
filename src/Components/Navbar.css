@@ -29,3 +29,7 @@
     text-decoration: none;
     color: black;
 }
+
+.header_le>img{
+    padding-left: 94px;
+}

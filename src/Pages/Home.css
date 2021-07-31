@@ -1,6 +1,7 @@
 .home {
     display: grid;
     grid-template-columns: auto auto;
+    padding-top: 69px;
 }
 
 .home_body {

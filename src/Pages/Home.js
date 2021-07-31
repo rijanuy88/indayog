@@ -14,7 +14,7 @@ function Home() {
             <Sidebar />
             <div className="home_body">
                 <div className="home_gallery">
-                    <h2>Fiesta Through the Years</h2>
+                    {/* <h2>Fiesta Through the Years</h2> */}
                     <ImageGallery items={ImgGal} />
                 </div>
                 <div className="home_charts">
