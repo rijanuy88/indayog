@@ -7,23 +7,45 @@ const useStyles = makeStyles({
         image: {
             width: 58,
             height: 58,
-            radius: 10,
+            borderRadius: 10,
         },
         details:{
             paddingLeft: 15,
+            alignContent:"center",
             
         }
     });
+
+
+const via = {
+    color:"#AAAAAA",
+    fontSize:"1.9vh",
+    fontWeight:"700",
+    fontFamily:"Monteserrat",
+    lineHeight:"2.4vh",
+};
+const name = {
+    fontSize:"2.4vh",
+    fontWeight:"800",
+    fontFamily:"Monteserrat",
+    lineHeight:"2.9vh",
+};
+const grid = {
+    marginBottom:"20px",
+    marginTop:"20px",
+};
+
+
 
 function Event({img, alt, link}) {
     const classes = useStyles();
     return (
         <div className='event'>
-            <Grid direction="row" container wrap="nowrap" spacing={2} >
+            <Grid style={grid} direction="row" container wrap="nowrap" spacing={2} >
                 <img className={classes.image} src={img} alt={alt}/>
                 <Grid className={classes.details} direction="column" container wrap="nowrap" spacing={0} >
-                    <Typography variant="h4">{alt}</Typography>
-                    <Typography variant="h5">{link}</Typography>
+                    <Typography variant="h4" style={name}>{alt}</Typography>
+                    <Typography variant="h5" style={via}>{link}</Typography>
                 </Grid>
             </Grid>
         </div>

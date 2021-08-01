@@ -8,11 +8,48 @@ import Tweets from './Tweets'
 import Typography from '@material-ui/core/Typography';
 
 function Sidebar() {
-    
+
+    const now = {
+        color:"#F78701",
+        fontSize:"3.2vh",
+        textAlign:"center",
+        fontWeight:"400",
+        marginBottom:"20px",
+    };
+    const next2 = {
+        color:"#545454",
+        fontSize:"3.2vh",
+        textAlign:"center",
+        fontWeight:"400",
+        marginBottom:"20px",
+    };
+
+    const grid = {
+        background: "#FFFFFF",
+        boxShadow: "5px 5px 5px rgba(0, 0, 0, 0.15)",
+        borderRadius: "20px",
+        // position: "absolute",
+        width: "320px",
+        // height: "375px",
+        left: "107px",
+        top: "201.98px",
+        paddingLeft:"47px"
+        
+    }
+    const bar = {
+        // position: "absolute",
+        width: "257px",
+        textAlign:"center",
+        border: "1px solid #CECECE",
+        marginBottom:"11px",
+        
+    }
+
+
     return (
-        <Grid direction="column" container wrap="nowrap" spacing={2} >
+        <Grid style={grid} direction="column" container wrap="nowrap" spacing={2} >
             <Grid item>
-                <Typography variant="h3">Now Happening</Typography>
+                <Typography variant="h3" style={now}>Now Happening</Typography>
                 {eventDataNow.map((now) => {
                     return (
                         <Event img={now.img} key={now.id} alt={now.alt} link={now.link} />
@@ -20,20 +57,21 @@ function Sidebar() {
                 })}
             </Grid>
             <Grid item>
-                <Typography variant="h3">Up Next</Typography>
+                <hr style={bar}/>
+                <Typography variant="h3" style={next2}>Up Next</Typography>
                 {eventDataNext.map((next) => {
                     return (
                         <Event img={next.img} key={next.id} alt={next.alt} link={next.link} />
                     )
                 })}
             </Grid>
-            <Grid item>
+            {/* <Grid item>
                 <hr />
             </Grid>
             <Grid item>
                 <h4>SAMAHAN Twitter Tweets</h4>
                 <Tweets />
-            </Grid>
+            </Grid> */}
         </Grid>
 
         // <div className='sidebar'>
