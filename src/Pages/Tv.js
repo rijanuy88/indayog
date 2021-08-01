@@ -1,5 +1,7 @@
 import React from 'react'
 import Episode from '../Components/SamahanTv/Episode'
+import logo from '../Assets/Logo/Samahan TV Logo@4x.png'
+import bg from '../Assets/Backgrounds/1martinHall.jpg'
 import { tvData } from '../Components/SamahanTv/tvData'
 import './Tv.css'
 
@@ -8,7 +10,7 @@ function Tv() {
         <div className='tv'>
             <div className="tv_left">
                 <div className="tv_left_poster">
-                    <img src="https://venngage-wordpress-gallery.s3.amazonaws.com/uploads/2018/10/25.jpg" alt="" />
+                    <img src={bg} alt="martin Hall" />
                 </div>
             </div>
             <div className="tv_right">
