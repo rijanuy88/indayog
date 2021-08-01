@@ -46,10 +46,8 @@ function Profiles({img, alt, name,position}) {
                     </Grid>
 
                     <Grid item xs>
-                        {/* <Typography> */}
-                            <Typography variant="h4">{name}</Typography>
-                            <Typography variant="h4">{position}</Typography>
-                        {/* </Typography> */}
+                            <Typography variant="h5">{name}</Typography>
+                            <Typography variant="body1">{position}</Typography>
                     </Grid>
                 </Grid>
             {/* </Paper> */}

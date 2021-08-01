@@ -10,7 +10,7 @@ function Clusters() {
     
     return (
         <div className='clusters'>
-            <Grid container direction="row" justifyContent="center" alignItems="center" spacing={2}>
+            <Grid container direction="row" justifyContent="center" alignItems="center" spacing={1}>
                 {/* <Grid item> */}
                     {clustersData.map((cluster) => {
                         return (
@@ -21,31 +21,13 @@ function Clusters() {
                     })}
                 {/* </Grid> */}
 
-                <Grid item xs={12}>
-                    <Typography variant="h2">INDAYOG 2021 CLUSTERS</Typography>
-                    <Typography variant="h3">73rd Ateneo Fiesta</Typography>
+                <Grid item xs={12} container direction="column" justifyContent="center" alignItems="center">
+                    <Typography variant="h2" style={{color: '#661693'}}>INDAYOG 2021 CLUSTERS</Typography>
+                    <Typography variant="h3" style={{color: '#BC208B', fontFamily:'america'}}>73rd Ateneo Fiesta</Typography>
                 </Grid>
             </Grid>
             
         </div>
-
-
-        // <div className='clusters'>
-        //     <div className="clusters_images">
-        //         {/* <Cards img="https://venngage-wordpress-gallery.s3.amazonaws.com/uploads/2018/10/25.jpg" alt="ACC" title='Accountancy'/> */}
-        //         {clustersData.map((cluster) => {
-        //             return (
-        //                 <Cards key={cluster.id} img={cluster.img} alt={cluster.alt} title={cluster.title} id={cluster.id} />
-        //             )
-        //         })}
-                
-        //     </div>
-        //     <div className="clusters_lower">
-        //         <h2>INDAYOG 2021 CLUSTERS</h2>
-        //         <h3>73rd Ateneo Fiesta</h3>
-        //     </div>
-            
-        // </div>
     )
 }
 

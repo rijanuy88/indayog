@@ -2,47 +2,8 @@
     display: grid;
     padding: 20px;
     /* padding-top: 202px; */
-    padding-bottom: 67px;
+    padding-bottom: 67px; 
     /* padding-left: 245px;
     padding-right: 245px; */
 }
 
-.clusters_images {
-    display: flex;
-    justify-content: space-between;
-}
-
-.clusters_lower>h2 {
-    width: 786px;
-    height: 52px;
-    left: 567px;
-    top: 899px;
-
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 800;
-    font-size: 50px;
-    line-height: 61px;
-    text-align: center;
-
-    color: #661693;
-}
-
-.clusters_lower>h3 {
-    width: 786px;
-    height: 52px;
-    left: 567px;
-    top: 899px;
-
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: 800;
-    font-size: 50px;
-    line-height: 61px;
-    text-align: center;
-}
-
-.clusters_lower {
-    justify-content: center;
-    align-items: center;
-}

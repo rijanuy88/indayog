@@ -25,6 +25,7 @@ export default createTheme({
         },
         h5: {
             fontFamily: 'Montserrat',
+            fontWeight: 900,
             fontSize: '1rem'
         },
         h6: {
@@ -32,6 +33,7 @@ export default createTheme({
         },
         body1: {
             fontFamily: 'Montserrat',
+            fontSize:'1rem'
         },
     },
 });

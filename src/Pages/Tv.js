@@ -11,7 +11,7 @@ function Tv() {
         <div className='tv'>
             <div className="tv_left">
                 <div className="tv_left_poster">
-                    <img src={bg} alt="martin Hall" />
+                    {/* <img src={bg} alt="martin Hall" /> */}
                 </div>
             </div>
             <div className="tv_right">

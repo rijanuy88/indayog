@@ -78,7 +78,7 @@ function Home() {
                 <div className="home_chart">
                     <Charts />
                     {/* judging updates */}
-                    <Typography variant="h3">Judging Updates</Typography>
+                    <Typography variant="h2">Judging Updates</Typography>
                 </div>
             </Grid>
         </Grid>

@@ -5,6 +5,8 @@
 .twg_images {
     display: grid;
     grid-template-columns: auto auto auto auto auto;
+    color:white;
+    text-align:center;
     /* display: flex; */
     /* justify-content: space-between; */
 }
