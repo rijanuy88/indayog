@@ -19,7 +19,7 @@ function TWG() {
     };
     return (
         <div className='twg'>
-            <Typography variant="h1" style={{fontFamily:'america'}}>
+            <Typography variant="h1" style={{fontFamily:'america',fontSize:'4rem',marginBottom:"65px",}}>
                 Meet the Team Behind {' '}
                 <Button style={buttonstyle}>
                     <Gradient dir="right-to-left" from="#CC2552" to="#661693">

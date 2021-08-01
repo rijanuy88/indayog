@@ -1,13 +1,13 @@
 
-import cluster1 from '../../Assets/Photos/posters/ACC.jpg'
-import cluster2 from '../../Assets/Photos/posters/BM.jpg'
-import cluster3 from '../../Assets/Photos/posters/CS.jpg'
-import cluster4 from '../../Assets/Photos/posters/HUMLET.jpg'
-import cluster5 from '../../Assets/Photos/posters/NSM.jpg'
-import cluster6 from '../../Assets/Photos/posters/SEA.jpg'
-import cluster7 from '../../Assets/Photos/posters/SOE.jpg'
-import cluster8 from '../../Assets/Photos/posters/SON.jpg'
-import cluster9 from '../../Assets/Photos/posters/SS.jpg'
+import cluster1 from '../../Assets/Photos/Avatars/ACC.png'
+import cluster2 from '../../Assets/Photos/Avatars/BM.png'
+import cluster3 from '../../Assets/Photos/Avatars/CS.png'
+import cluster4 from '../../Assets/Photos/Avatars/HUMLET.png'
+import cluster5 from '../../Assets/Photos/Avatars/SOE-NSM.png'
+import cluster6 from '../../Assets/Photos/Avatars/SEA.png'
+import cluster7 from '../../Assets/Photos/Avatars/SON.png'
+import cluster8 from '../../Assets/Photos/Avatars/SS.png'
+
 
 export const clustersData = [
     {
@@ -49,19 +49,19 @@ export const clustersData = [
     {
         id:7,
         img:cluster7,
-        alt:"SOE",
-        title :'School of Education',
+        alt:"SON",
+        title :'School of Nursing',
     },
     {
         id:8,
         img:cluster8,
-        alt:"SON", 
-        title :'School of Nursing',
-    },
-    {
-        id:9,
-        img:cluster9, 
         alt:"SS", 
         title :'Social Sciences',
     },
+    // {
+    //     id:9,
+    //     img:cluster9, 
+    //     alt:"SS", 
+    //     title :'Social Sciences',
+    // },
 ]

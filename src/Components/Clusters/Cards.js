@@ -32,7 +32,7 @@ function Cards({img, alt,title,id}) {
                         component="img"
                         alt={alt}
                         id={id}
-                        height="667"
+                        height="567"
                         image={img}
                         title={title}
                     />

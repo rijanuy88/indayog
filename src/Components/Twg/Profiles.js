@@ -27,6 +27,12 @@ function Profiles({img, alt, name,position}) {
         },
     }));
 
+    const card = {
+        // height:235.77,
+        // width:235.77,
+        borderRadius:"20px",
+    };
+
     const classes = useStyles();
     
     return (
@@ -35,7 +41,8 @@ function Profiles({img, alt, name,position}) {
                 <Grid direction="column" container wrap="nowrap" spacing={2}>
                     <Grid item>
                         <CardActionArea>
-                            <CardMedia
+                            <CardMedia 
+                                style={card}
                                 component="img"
                                 alt={alt}
                                 height="345"

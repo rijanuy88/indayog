@@ -11,25 +11,6 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 
-// import { Grid, makeStyles, Paper } from '@material-ui/core';
-
-// const useStyles = makeStyles((theme) =>({
-//         root: {
-//             maxWidth: 345,
-//         },
-
-//         theme: {
-//             flexGrow: 1,
-//             overflow: 'hidden',
-//             padding: theme.spacing(0, 3),
-//         },
-//         paper: {
-//             maxWidth: 400,
-//             margin: `${theme.spacing(1)}px auto`,
-//             padding: theme.spacing(2),
-//         },     
-//     }));
-
 function Image(props) {
     return (
         <Card style={{ borderRadius: 20 }}>
@@ -46,22 +27,15 @@ function Image(props) {
 }
 
 function Home() {
-    // const classes = useStyles();
+    
+    const standing = {
+        color: "#D51E49",
+        transform: "rotate(270deg)",
+        fontFamily: "boldstrom",
+    };
+
+
     return (
-        // <div className='home'>
-        //     <Grid direction="row" container wrap="nowrap" spacing={2}>
-        //         <Paper className={classes.paper} alignItems="center">
-        //             <Sidebar /> 
-        //         </Paper>
-                
-        //         <Grid direction="row" container wrap="nowrap" spacing={2}>
-        //             <ImageGallery items={ImgGal} />
-        //             <h2>Indayog 2021 Cluster Standing</h2>
-        //             <Charts />
-        //             <h3>Judging Updates</h3>
-        //         </Grid>
-        //     </Grid>
-        // </div>
         <Grid container spacing={2} justifyContent="center" alignItems="center">
             <Grid item xs={12} md={2}>
                 <Sidebar />
@@ -74,7 +48,7 @@ function Home() {
                 </Carousel>
             </Grid>
             <Grid item md={12}>
-                <Typography variant="h2">Indayog 2021 Cluster Standing</Typography>
+                <Typography variant="h2" style={standing}>Indayog 2021 Cluster Standing</Typography>
                 <div className="home_chart">
                     <Charts />
                     {/* judging updates */}
