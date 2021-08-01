@@ -18,7 +18,7 @@ function Tv() {
                     {tvData.map((tv) => {
                         return (
                             // <Episode img={tv.img} alt={tv.alt} episode={tv.episode} description={tv.description} />
-                            <Episode embedId={tv.embedId} episode={tv.episode} description={tv.description} />
+                            <Episode key={tv.id} embedId={tv.embedId} episode={tv.episode} description={tv.description} />
                         )
                     })}
 

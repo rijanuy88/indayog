@@ -3,7 +3,16 @@ import React from 'react'
 import { Card, CardActionArea, makeStyles } from '@material-ui/core';
 import './Cards.css'
 
-function Cards({img, alt,title}) {
+function Cards({img, alt,title,id}) {
+    const handleClick = (e) => {
+        e.preventDefault()
+        const target = e.target.getAttribute('id')
+        // const location = document.querySelector(target).offsetTop
+        const location = document.querySelector(target)
+        console.log(location);
+
+        
+    }
     const useStyles = makeStyles({
         root: {
             // maxWidth: 345,
@@ -18,12 +27,13 @@ function Cards({img, alt,title}) {
     const classes = useStyles();
     return (
         <div className="cards">
-            <Card className={classes.root} id='card'>
+            <Card className={classes.root} id='card' onClick={handleClick}>
                 {/* <h4>{title}</h4> */}
                 <CardActionArea>
                     <CardMedia
                         component="img"
                         alt={alt}
+                        id={id}
                         height="667"
                         image={img}
                         title={title}

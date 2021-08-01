@@ -14,7 +14,7 @@ function Sidebar() {
                 <div className="sidebar_eventNow">
                     {eventDataNow.map((now) => {
                         return (
-                            <Event img={now.img} name={now.name} link={now.Link} />
+                            <Event img={now.img} key={now.id} alt={now.alt} link={now.link} />
                         )
                     })}
                 </div>
@@ -23,7 +23,7 @@ function Sidebar() {
                 <div className="sidebar_eventNext">
                     {eventDataNext.map((next) => {
                         return (
-                            <Event img={next.img} name={next.name} link={next.Link} />
+                            <Event img={next.img} key={next.id} alt={next.alt} link={next.link} />
                         )
                     })}
                 </div>

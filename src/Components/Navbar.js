@@ -27,7 +27,7 @@ const Navbar = () => {
                 <div className="header_left">
                     {/* <a href='#home' key='1' onClick={handleClick}>INDAYOG 2021 <br></br>73rd Ateneo Fiesta </a> */}
                     
-                    <img href='#home' key='1' onClick={handleClick} src={logo}/>
+                    <img href='#home' alt='home' key='1' onClick={handleClick} src={logo}/>
                 </div>
                 <div className="header_right">
                     {links.map((link) => {

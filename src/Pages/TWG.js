@@ -11,7 +11,7 @@ function TWG() {
             <div className="twg_images">
                 {TwgData.map((twg) => {
                     return (
-                        <Profiles img={twg.img} alt={twg.alt} name={twg.name} position={twg.position} />
+                        <Profiles key={twg.id} img={twg.img} alt={twg.alt} name={twg.name} position={twg.position} />
                     )
                 })}
                 

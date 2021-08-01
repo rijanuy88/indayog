@@ -12,7 +12,7 @@ function Clusters() {
                 {/* <Cards img="https://venngage-wordpress-gallery.s3.amazonaws.com/uploads/2018/10/25.jpg" alt="ACC" title='Accountancy'/> */}
                 {clustersData.map((cluster) => {
                     return (
-                        <Cards img={cluster.img} alt={cluster.alt} title={cluster.title} />
+                        <Cards key={cluster.id} img={cluster.img} alt={cluster.alt} title={cluster.title} id={cluster.id} />
                     )
                 })}
                 

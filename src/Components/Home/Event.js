@@ -1,12 +1,12 @@
 import React from 'react'
 import './Event.css'
 
-function Event({img, name, link}) {
+function Event({img, alt, link}) {
     return (
         <div className='event'>
-            <img src={img} />
+            <img src={img} alt={alt}/>
             <div className="event_details">
-                <h4>{name}</h4>
+                <h4>{alt}</h4>
                 <h5>{link}</h5>
             </div>
         </div>
