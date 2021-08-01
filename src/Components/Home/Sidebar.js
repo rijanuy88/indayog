@@ -33,12 +33,13 @@ function Sidebar() {
         // height: "375px",
         left: "107px",
         top: "201.98px",
-        paddingLeft:"47px"
+        paddingLeft:"47px",
+        paddingRight:"77px"
         
     }
     const bar = {
         // position: "absolute",
-        width: "257px",
+        width: "210px",
         textAlign:"center",
         border: "1px solid #CECECE",
         marginBottom:"11px",

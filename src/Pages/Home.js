@@ -36,7 +36,7 @@ function Home() {
 
 
     return (
-        <Grid container spacing={2} justifyContent="center" alignItems="center">
+        <Grid container spacing={2} justifyContent="space-around" alignItems="flex-start">
             <Grid item xs={12} md={2}>
                 <Sidebar />
             </Grid>
@@ -47,14 +47,14 @@ function Home() {
                     )) }
                 </Carousel>
             </Grid>
-            <Grid item md={12}>
-                <Typography variant="h2" style={standing}>Indayog 2021 Cluster Standing</Typography>
-                <div className="home_chart">
-                    <Charts />
+            {/* <Grid item md={12}> */}
+                {/* <Typography variant="h2" style={standing}>Indayog 2021 Cluster Standing</Typography> */}
+                {/* <div className="home_chart"> */}
+                    {/* <Charts /> */}
                     {/* judging updates */}
-                    <Typography variant="h2">Judging Updates</Typography>
-                </div>
-            </Grid>
+                    {/* <Typography variant="h2">Judging Updates</Typography> */}
+                {/* </div> */}
+            {/* </Grid> */}
         </Grid>
     )
 }
