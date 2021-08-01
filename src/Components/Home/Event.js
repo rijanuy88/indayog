@@ -1,6 +1,7 @@
 import { Grid, makeStyles } from '@material-ui/core'
 import React from 'react'
 // import './Event.css'
+import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles({
         image: {
@@ -21,8 +22,8 @@ function Event({img, alt, link}) {
             <Grid direction="row" container wrap="nowrap" spacing={2} >
                 <img className={classes.image} src={img} alt={alt}/>
                 <Grid className={classes.details} direction="column" container wrap="nowrap" spacing={0} >
-                    <h4>{alt}</h4>
-                    <h5>{link}</h5>
+                    <Typography variant="h4">{alt}</Typography>
+                    <Typography variant="h5">{link}</Typography>
                 </Grid>
             </Grid>
         </div>

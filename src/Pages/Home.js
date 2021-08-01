@@ -2,10 +2,15 @@
 import React from 'react'
 import './Home.css'
 import Sidebar from '../Components/Home/Sidebar'
-import ImageGallery from 'react-image-gallery';
 import "react-image-gallery/styles/css/image-gallery.css";
 import Charts from '../Components/Home/Charts';
+import Carousel from 'react-material-ui-carousel';
 import { ImgGal } from '../Components/Home/ImgGal';
+import Card from '@material-ui/core/Card';
+import CardMedia from '@material-ui/core/CardMedia';
+import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
+
 // import { Grid, makeStyles, Paper } from '@material-ui/core';
 
 // const useStyles = makeStyles((theme) =>({
@@ -25,6 +30,21 @@ import { ImgGal } from '../Components/Home/ImgGal';
 //         },     
 //     }));
 
+function Image(props) {
+    return (
+        <Card style={{ borderRadius: 20 }}>
+            <CardMedia
+                component="img"
+                alt={`image_${props.key}`}
+                height="100%"
+                width="100%"
+                image={props.item.original}
+                title={`image_${props.key}`}
+            />
+        </Card>
+    )
+}
+
 function Home() {
     // const classes = useStyles();
     return (
@@ -42,24 +62,26 @@ function Home() {
         //         </Grid>
         //     </Grid>
         // </div>
-
-        <div className='home'>
-            <Sidebar />
-            <div className="home_body">
-                <div className="home_gallery">
-                    {/* <h2>Fiesta Through the Years</h2> */}
-                    <ImageGallery items={ImgGal} />
+        <Grid container spacing={2} justifyContent="center" alignItems="center">
+            <Grid item xs={12} md={2}>
+                <Sidebar />
+            </Grid>
+            <Grid item xs={12} md={8}>
+                <Carousel autoPlay>
+                    { ImgGal.map((img, i) => (
+                        <Image item={img} key={i} />
+                    )) }
+                </Carousel>
+            </Grid>
+            <Grid item md={12}>
+                <Typography variant="h2">Indayog 2021 Cluster Standing</Typography>
+                <div className="home_chart">
+                    <Charts />
+                    {/* judging updates */}
+                    <Typography variant="h3">Judging Updates</Typography>
                 </div>
-                <div className="home_charts">
-                    <h2>Indayog 2021 Cluster Standing</h2>
-                    <div className="home_chart">
-                        <Charts />
-                        {/* judging updates */}
-                        <h3>Judging Updates</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
+            </Grid>
+        </Grid>
     )
 }
 

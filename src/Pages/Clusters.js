@@ -2,6 +2,7 @@ import { Grid } from '@material-ui/core'
 import React from 'react'
 import Cards from '../Components/Clusters/Cards'
 import { clustersData } from '../Components/Clusters/ClustersData'
+import Typography from '@material-ui/core/Typography';
 
 import './Clusters.css'
 
@@ -9,19 +10,21 @@ function Clusters() {
     
     return (
         <div className='clusters'>
-            <Grid container direction="row" justifyContent="space-around" alignItems="center"spacing={2}>
+            <Grid container direction="row" justifyContent="center" alignItems="center" spacing={2}>
                 {/* <Grid item> */}
                     {clustersData.map((cluster) => {
                         return (
-                            <Cards key={cluster.id} img={cluster.img} alt={cluster.alt} title={cluster.title} id={cluster.id} />
+                            <Grid item>
+                                <Cards key={cluster.id} img={cluster.img} alt={cluster.alt} title={cluster.title} id={cluster.id} />
+                            </Grid>
                         )
                     })}
                 {/* </Grid> */}
 
-                    <Grid justifyContent="space-around" alignItems="center">
-                        <h2>INDAYOG 2021 CLUSTERS</h2>
-                        <h3>73rd Ateneo Fiesta</h3>
-                    </Grid>
+                <Grid item xs={12}>
+                    <Typography variant="h2">INDAYOG 2021 CLUSTERS</Typography>
+                    <Typography variant="h3">73rd Ateneo Fiesta</Typography>
+                </Grid>
             </Grid>
             
         </div>

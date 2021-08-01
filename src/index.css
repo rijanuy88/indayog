@@ -2,17 +2,17 @@
 
 @font-face {
   font-family: 'Boldstrom';
-  src: local('Boldstrom'), url(./Assets/Fonts/Boldstrom\ D.otf) format('otf');
+  src: local('Boldstrom'), url(./Assets/Fonts/Boldstrom\ D.woff2) format('woff2');
 }
 
 @font-face {
   font-family: 'Montserrat';
-  src: local('Montserrat'), url(./Assets/Fonts/Montserrat-Regular.otf) format('otf');
+  src: local('Montserrat'), url(./Assets/Fonts/Montserrat-Regular.woff2) format('woff2');
 }
 
 @font-face {
   font-family: 'America';
-  src: local('America'), url(./Assets/Fonts/Hello\ America\ Demo.otf) format('otf');
+  src: local('America'), url(./Assets/Fonts/Hello\ America\ Demo.woff2) format('woff2');
 }
 
 *,

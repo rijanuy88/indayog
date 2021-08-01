@@ -1,6 +1,7 @@
 import React from 'react'
 import Episode from '../Components/SamahanTv/Episode'
 import logo from '../Assets/Logo/Samahan TV Logo@4x.png'
+import Typography from '@material-ui/core/Typography';
 import bg from '../Assets/Backgrounds/1martinHall.jpg'
 import { tvData } from '../Components/SamahanTv/tvData'
 import './Tv.css'
@@ -14,8 +15,8 @@ function Tv() {
                 </div>
             </div>
             <div className="tv_right">
-                <h2>SAMAHAN TV?</h2>
-                <h4>SAMAHAN TV DESCRIPTION</h4>
+                <Typography variant="h2">SAMAHAN TV?</Typography>
+                <Typography variant="h4">SAMAHAN TV DESCRIPTION</Typography>
                 <div className="tv_right_episodes">
                     {tvData.map((tv) => {
                         return (

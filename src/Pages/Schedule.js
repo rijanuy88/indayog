@@ -1,5 +1,6 @@
 import React from 'react'
 import './Schedule.css'
+import Typography from '@material-ui/core/Typography';
 
 function Schedule() {
     return (
@@ -11,7 +12,7 @@ function Schedule() {
             <div className="schedule_right">
                 <div className="schedule_right_top">
                     {/* fb link */}
-                    <h3>live</h3>
+                    <Typography variant="h3">live</Typography>
                 </div>
                 <div className="schedule_right_bottom">
                     {/* sched day 123 */}

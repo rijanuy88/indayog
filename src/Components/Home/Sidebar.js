@@ -5,29 +5,36 @@ import { eventDataNext } from './eventDataNext'
 import { eventDataNow } from './eventDataNow'
 import './Sidebar.css'
 import Tweets from './Tweets'
+import Typography from '@material-ui/core/Typography';
 
 function Sidebar() {
     
     return (
-        <div className='sidebar'>
-            <Grid direction="column" container wrap="nowrap" spacing={2} >
-                <h3>Now Happening</h3>
+        <Grid direction="column" container wrap="nowrap" spacing={2} >
+            <Grid item>
+                <Typography variant="h3">Now Happening</Typography>
                 {eventDataNow.map((now) => {
                     return (
                         <Event img={now.img} key={now.id} alt={now.alt} link={now.link} />
                     )
                 })}
-                <hr />
-                <h3>Up Next</h3>
+            </Grid>
+            <Grid item>
+                <Typography variant="h3">Up Next</Typography>
                 {eventDataNext.map((next) => {
                     return (
                         <Event img={next.img} key={next.id} alt={next.alt} link={next.link} />
                     )
                 })}
+            </Grid>
+            <Grid item>
+                <hr />
+            </Grid>
+            <Grid item>
                 <h4>SAMAHAN Twitter Tweets</h4>
                 <Tweets />
             </Grid>
-        </div>
+        </Grid>
 
         // <div className='sidebar'>
         //     <div className="sidebar_top">

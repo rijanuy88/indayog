@@ -1,6 +1,7 @@
 import React from 'react'
 import './Episode.css'
 import Youtube from './Youtube'
+import Typography from '@material-ui/core/Typography';
 
 function Episode({embedId,episode,description}) {
     return (
@@ -10,8 +11,8 @@ function Episode({embedId,episode,description}) {
                 <Youtube embedId={embedId} />
             </div>
             <div className="episode_right">
-                <h2>{episode}</h2>
-                <h3>{description}</h3>
+                <Typography variant="h2">{episode}</Typography>
+                <Typography variant="h3">{description}</Typography>
             </div>
         </div>
     )

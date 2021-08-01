@@ -2,6 +2,7 @@ import React from 'react'
 import './Profiles.css'
 import CardMedia from '@material-ui/core/CardMedia';
 import { Card, CardActionArea, makeStyles } from '@material-ui/core';
+import Typography from '@material-ui/core/Typography';
 
 import Grid from '@material-ui/core/Grid';
 // import Paper from '@material-ui/core/Paper';
@@ -46,8 +47,8 @@ function Profiles({img, alt, name,position}) {
 
                     <Grid item xs>
                         {/* <Typography> */}
-                            <h4>{name}</h4>
-                            <h4>{position}</h4>
+                            <Typography variant="h4">{name}</Typography>
+                            <Typography variant="h4">{position}</Typography>
                         {/* </Typography> */}
                     </Grid>
                 </Grid>
