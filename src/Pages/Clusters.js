@@ -1,3 +1,4 @@
+import { Grid } from '@material-ui/core'
 import React from 'react'
 import Cards from '../Components/Clusters/Cards'
 import { clustersData } from '../Components/Clusters/ClustersData'
@@ -8,21 +9,40 @@ function Clusters() {
     
     return (
         <div className='clusters'>
-            <div className="clusters_images">
-                {/* <Cards img="https://venngage-wordpress-gallery.s3.amazonaws.com/uploads/2018/10/25.jpg" alt="ACC" title='Accountancy'/> */}
-                {clustersData.map((cluster) => {
-                    return (
-                        <Cards key={cluster.id} img={cluster.img} alt={cluster.alt} title={cluster.title} id={cluster.id} />
-                    )
-                })}
-                
-            </div>
-            <div className="clusters_lower">
-                <h2>INDAYOG 2021 CLUSTERS</h2>
-                <h3>73rd Ateneo Fiesta</h3>
-            </div>
+            <Grid container direction="row" justifyContent="space-around" alignItems="center"spacing={2}>
+                {/* <Grid item> */}
+                    {clustersData.map((cluster) => {
+                        return (
+                            <Cards key={cluster.id} img={cluster.img} alt={cluster.alt} title={cluster.title} id={cluster.id} />
+                        )
+                    })}
+                {/* </Grid> */}
+
+                    <Grid justifyContent="space-around" alignItems="center">
+                        <h2>INDAYOG 2021 CLUSTERS</h2>
+                        <h3>73rd Ateneo Fiesta</h3>
+                    </Grid>
+            </Grid>
             
         </div>
+
+
+        // <div className='clusters'>
+        //     <div className="clusters_images">
+        //         {/* <Cards img="https://venngage-wordpress-gallery.s3.amazonaws.com/uploads/2018/10/25.jpg" alt="ACC" title='Accountancy'/> */}
+        //         {clustersData.map((cluster) => {
+        //             return (
+        //                 <Cards key={cluster.id} img={cluster.img} alt={cluster.alt} title={cluster.title} id={cluster.id} />
+        //             )
+        //         })}
+                
+        //     </div>
+        //     <div className="clusters_lower">
+        //         <h2>INDAYOG 2021 CLUSTERS</h2>
+        //         <h3>73rd Ateneo Fiesta</h3>
+        //     </div>
+            
+        // </div>
     )
 }
 

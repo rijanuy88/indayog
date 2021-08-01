@@ -6,7 +6,7 @@ import './Cards.css'
 function Cards({img, alt,title,id}) {
     const handleClick = (e) => {
         e.preventDefault()
-        const target = e.target.getAttribute('id')
+        const target = e.target.getAttribute('id').value
         // const location = document.querySelector(target).offsetTop
         const location = document.querySelector(target)
         console.log(location);
