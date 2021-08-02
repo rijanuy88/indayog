@@ -254,7 +254,7 @@ a {
 }
 
 .samahanTv {
-  background-image: url('./Assets/Backgrounds/SAMAHAN\ TV\ BG.jpg');
+  /* background-image: url('./Assets/Backgrounds/SAMAHAN\ TV\ BG.jpg'); */
   background-size: cover;
   background-position: center;
   background-clip: padding-box;
