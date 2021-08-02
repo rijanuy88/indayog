@@ -16,7 +16,17 @@
 .home_gallery {
     /* max-width: 1020px; */
     max-width: 50vw;
-    padding-left: 05%;
+    padding-left: 5%;
     align-content: center;
 }
 
+.box {
+    position: absolute;
+    right: 0;
+    z-index: 100;
+    background-color: white;
+}
+
+.sidebar {
+    background-color: white;
+}
