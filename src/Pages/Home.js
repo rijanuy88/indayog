@@ -12,7 +12,8 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Standing from '../Components/Home/Standing';
 
-
+import { useSpring, animated as a } from "react-spring";
+import { Button } from '@material-ui/core';
 
 function Image(props) {
     return (
@@ -36,24 +37,47 @@ function Home() {
         transform: "rotate(270deg)",
         fontFamily: "boldstrom",
     };
+    
 
+    const [greetingStatus, displayGreeting] = React.useState(false);
+
+    const contentProps = useSpring({
+        opacity: greetingStatus ? 1 : 0,
+        // marginTop: greetingStatus ? 0 : -500
+        marginLeft: greetingStatus ? 0 : 1000
+    });
 
     return (
         <Grid container spacing={2} justifyContent="space-around" alignItems="flex-start">
-            <Grid item xs={12} md={2}>
+            <Grid item xs={4} md={2}>
                 <Sidebar />
             </Grid>
-            <Grid item xs={12} md={8}>
+            <Grid item xs={4} md={6}>
                 <Carousel autoPlay>
                     { ImgGal.map((img, i) => (
                         <Image item={img} key={i} />
                     )) }
                 </Carousel>
             </Grid>
-            <Grid container direction="row" justifyContent="flex-start" alignItems="flex-start">
-                    <Standing /> 
-            </Grid>
-            
+            {/* <Grid item xs={4} md={1}>
+                <Standing /> 
+            </Grid>  */}
+            <Grid item xs={4} md={1}>
+                {!greetingStatus ? (
+                    <Button onClick={() => displayGreeting(a => !a)}>
+                        <Typography variant="h2" style={standing}>Indayog 2021 Cluster Standing</Typography>    
+                    </Button>
+                ) : (
+                    <a.div className="box" style={contentProps}>
+                        <Button onClick={() => displayGreeting(a => !a)}>
+                            <Typography variant="h2" style={standing}>Indayog 2021 Cluster Standing</Typography>    
+                        </Button>
+                        <Standing />
+                    </a.div>
+                    
+                )}
+
+            </Grid> 
             
 
             {/* <Grid item md={12}> */}
