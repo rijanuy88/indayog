@@ -2,7 +2,6 @@ import React from 'react'
 import Episode from '../Components/SamahanTv/Episode'
 import logo from '../Assets/Logo/Samahan TV Logo@4x.png'
 import Typography from '@material-ui/core/Typography';
-import bg from '../Assets/Backgrounds/1martinHall.jpg'
 import { tvData } from '../Components/SamahanTv/tvData'
 import './Tv.css'
 

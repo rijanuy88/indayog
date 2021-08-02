@@ -8,7 +8,7 @@
     /* base of overlap */
     position: relative;
     border: none;
-    border-radius: 2vh;
+    /* border-radius: 2vh; */
     /* avoid distorted images */
     object-fit: contain;
     margin-left: 2vh;

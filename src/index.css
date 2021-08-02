@@ -1,5 +1,6 @@
 /* @import url('https://fonts.googleapis.com/css?family=Montserrat:400|Inconsolata:400'); */
 
+
 @font-face {
   font-family: 'Boldstrom';
   src: local('Boldstrom'), url(./Assets/Fonts/Boldstrom\ D.woff2) format('woff2');
@@ -192,9 +193,6 @@ a {
   margin-left: 25%;
 }
 
-
-
-
 .nav-center {
   width: 100%;
   max-width: var(--max-width);
@@ -230,19 +228,36 @@ a {
 } */
 
 .home {
-  background: #B2C1F8;
+  /* background: #B2C1F8; */
+  background-image: url('./Assets/Backgrounds/Home\ BG.jpg');
+  background-size: cover;
+  background-position: center;
+  background-clip: padding-box;
+  /* background-size: contain; */
+  /* background-repeat: no-repeat; */
 }
 
 .clusters {
-  background: rgb(255, 255, 255);
+  /* background: rgb(255, 255, 255); */
+  background-image: url('./Assets/Backgrounds/Clusters\ BG.jpg');
+  background-size: cover;
+  background-position: center;
+  background-clip: padding-box;
 }
 
 .schedule {
-  background: #ffd1ba;
+  /* background: #ffd1ba; */
+  background-image: url('./Assets/Backgrounds/Schedule\ BG.jpg');
+  background-size: cover;
+  background-position: center;
+  background-clip: padding-box;
 }
 
 .samahanTv {
-  background: white;
+  background-image: url('./Assets/Backgrounds/SAMAHAN\ TV\ BG.jpg');
+  background-size: cover;
+  background-position: center;
+  background-clip: padding-box;
 }
 
 .sticky {
@@ -252,7 +267,11 @@ a {
 
 .fiestaTWG {
   /* background: #DB6A96; */
-  background: #A981BA;
+  /* background: #A981BA; */
+  background-image: url('./Assets/Backgrounds/TWG\ BG.jpg');
+  background-size: cover;
+  background-position: center;
+  background-clip: padding-box;
 }
 
 @media screen and (min-width: 768px) {

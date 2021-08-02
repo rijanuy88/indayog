@@ -35,36 +35,6 @@ function Standing() {
                 Judging Updates
             </Typography>
         </div>
-
-        // <div className="home_chart">
-        //     {/* <button onClick={() => displayGreeting(a => !a)} className="button">
-        //         <Typography variant="h2" style={standing}>Indayog 2021 Cluster Standing</Typography>
-        //     </button> */}
-
-        //     {!greetingStatus ? (
-        //         <div className="home_chart">
-        //             <Button onClick={() => displayGreeting(a => !a)}>
-        //                 <Typography variant="h2" style={standing}>Indayog 2021 Cluster Standing</Typography>
-        //             </Button>
-        //             <Charts />
-
-        //             <hr />
-        //             <Typography variant="h2" style={judging}>Judging Updates</Typography>
-        //         </div>
-        //     ) : (
-        //         <a.div className="box" style={contentProps}>
-        //             <div className="home_chart">
-        //                 <Button onClick={() => displayGreeting(a => !a)}>
-        //                     <Typography variant="h2" style={standing}>Indayog 2021 Cluster Standing</Typography>
-        //                 </Button>
-        //                 <Charts />
-
-        //                 <hr />
-        //                 <Typography variant="h2" style={judging}>Judging Updates</Typography>
-        //             </div>
-        //         </a.div>
-        //     )}
-        // </div>
     );
 }
 

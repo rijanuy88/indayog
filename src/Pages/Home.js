@@ -74,9 +74,6 @@ function Home() {
                         ))}
                     </Carousel>
                 </Grid>
-                {/* <Grid item xs={4} md={1}>
-                    <Standing /> 
-                </Grid>  */}
                 <Grid item xs={2} md={1} align="center">
                     {/* {!greetingStatus ? (
                         <div
