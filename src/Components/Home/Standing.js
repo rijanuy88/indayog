@@ -1,7 +1,6 @@
 import { Button, Grid, Typography } from '@material-ui/core'
 import React from 'react'
 import Charts from './Charts'
-import { useSpring, animated as a } from "react-spring";
 
 
 function Standing() {
@@ -17,32 +16,26 @@ function Standing() {
         fontSize: "3.18vh",
     };
 
-    const [greetingStatus, displayGreeting] = React.useState(false);
-
-    const contentProps = useSpring({
-        opacity: greetingStatus ? 1 : 0,
-        marginTop: greetingStatus ? 0 : -500
-    });
     
 
     return (
-        <Grid container direction="row" justifyContent="space-evenly" alignItems="center">
+        // <Grid container direction="row" justifyContent="space-evenly" alignItems="center">
             
-                <Typography variant="h2" style={standing}>Indayog 2021 Cluster Standing</Typography>
-                <Charts />
-                <hr/>
-                <Typography variant="h2" style={judging}>Judging Updates</Typography>
-            
-        </Grid> 
-
-        // <div className="home_chart">
-        //         {/* <Button onClick={() => displayGreeting(a => !a)}> */}
-        //             {/* <Typography variant="h2" style={standing}>Indayog 2021 Cluster Standing</Typography> */}
-        //         {/* </Button> */}
+        //         <Typography variant="h2" style={standing}>Indayog 2021 Cluster Standing</Typography>
         //         <Charts />
-        //         <hr />
+        //         <hr/>
         //         <Typography variant="h2" style={judging}>Judging Updates</Typography>
-        // </div>
+            
+        // </Grid> 
+
+        <div className="home_chart">
+                {/* <Button onClick={() => displayGreeting(a => !a)}> */}
+                    {/* <Typography variant="h2" style={standing}>Indayog 2021 Cluster Standing</Typography> */}
+                {/* </Button> */}
+                <Charts />
+                <hr />
+                <Typography variant="h2" style={judging}>Judging Updates</Typography>
+        </div>
 
         // <div className="home_chart">
         //     {/* <button onClick={() => displayGreeting(a => !a)} className="button">
