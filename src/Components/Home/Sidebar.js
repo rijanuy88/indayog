@@ -29,8 +29,8 @@ function Sidebar() {
         boxShadow: "5px 5px 5px rgba(0, 0, 0, 0.15)",
         borderRadius: "20px",
         // position: "absolute",
-        width: "320px",
-        // height: "375px",
+        width: "42.7vh",
+        height: "52.6vh",
         left: "107px",
         top: "201.98px",
         paddingLeft:"47px",
@@ -48,6 +48,7 @@ function Sidebar() {
 
 
     return (
+        <>
         <Grid style={grid} direction="column" container wrap="nowrap" spacing={2} >
             <Grid item>
                 <Typography variant="h3" style={now}>Now Happening</Typography>
@@ -66,14 +67,22 @@ function Sidebar() {
                     )
                 })}
             </Grid>
-            {/* <Grid item>
+            {/* <Grid item >
                 <hr />
             </Grid>
-            <Grid item>
+            <Grid item style={grid}>
                 <h4>SAMAHAN Twitter Tweets</h4>
                 <Tweets />
             </Grid> */}
         </Grid>
+        <Grid item >
+            <hr />
+        </Grid>
+        <Grid item style={grid}>
+            <h4>SAMAHAN Twitter Tweets</h4>
+            <Tweets />
+        </Grid>
+        </>
 
         // <div className='sidebar'>
         //     <div className="sidebar_top">

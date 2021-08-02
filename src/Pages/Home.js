@@ -21,6 +21,7 @@ const useStyles = makeStyles(() => ({
         position: "absolute",
         backgroundColor: "white",
         borderRadius: "26px 0 0 26px",
+        height:"100%",
     },
 }));
 
