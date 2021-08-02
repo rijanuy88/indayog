@@ -14,7 +14,7 @@ const Navbar = () => {
 
         window.scrollTo({
             left: 0,
-            top: location - 133,
+            top: location - 80,
             duration: 1500,
             delay: 100,
             smooth: 'easeInOutQuint',

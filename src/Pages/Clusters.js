@@ -22,7 +22,7 @@ function Clusters() {
                 {/* </Grid> */}
 
                 <Grid item xs={12} container direction="column" justifyContent="center" alignItems="center">
-                    <Typography variant="h2" style={{color: '#661693'}}>INDAYOG 2021 CLUSTERS</Typography>
+                    <Typography variant="h2" style={{color: '#661693',marginTop:"30px"}}>INDAYOG 2021 CLUSTERS</Typography>
                     <Typography variant="h3" style={{color: '#BC208B', fontFamily:'america'}}>73rd Ateneo Fiesta</Typography>
                 </Grid>
             </Grid>

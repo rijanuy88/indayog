@@ -19,6 +19,7 @@ function Cards({img, alt,title,id}) {
             // maxHeight: 345,
             width: 134,
             height:567,
+            
         },
     });
 

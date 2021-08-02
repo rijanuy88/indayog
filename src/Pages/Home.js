@@ -10,6 +10,9 @@ import Card from '@material-ui/core/Card';
 import CardMedia from '@material-ui/core/CardMedia';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
+import Standing from '../Components/Home/Standing';
+
+
 
 function Image(props) {
     return (
@@ -47,6 +50,12 @@ function Home() {
                     )) }
                 </Carousel>
             </Grid>
+            <Grid container direction="row" justifyContent="flex-start" alignItems="flex-start">
+                    <Standing /> 
+            </Grid>
+            
+            
+
             {/* <Grid item md={12}> */}
                 {/* <Typography variant="h2" style={standing}>Indayog 2021 Cluster Standing</Typography> */}
                 {/* <div className="home_chart"> */}
@@ -55,6 +64,8 @@ function Home() {
                     {/* <Typography variant="h2">Judging Updates</Typography> */}
                 {/* </div> */}
             {/* </Grid> */}
+
+
         </Grid>
     )
 }
