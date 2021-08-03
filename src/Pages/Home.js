@@ -86,6 +86,7 @@ function Home({ forwardedRef }) {
                         ))}
                     </Carousel>
                 </Grid>
+
                 <Grid item xs={2} md={1} align="center">
                     {/* {!greetingStatus ? (
                         <div
@@ -109,14 +110,20 @@ function Home({ forwardedRef }) {
                                     style={{ transform: "rotate(270deg)" }}
                                     fullWidth
                                 >
+                                    <Grid item>
+                                        <img src='/public/assets/Buttons/Artboard 1@4x.png' alt="FiestaYarn" />
+                                    </Grid>
+                                    
                                     <Typography variant="h4" className={classes.standing}>
                                         Indayog 2021 Cluster Standing
                                     </Typography>
+                                    
                                 </Button>
                             </Grid>
-                            <Grid item xs={8}>
+                            <Grid item xs={8}  direction="column">
                                 <Standing />
                             </Grid>
+                            
                         </Grid>
                     </a.div>
                     {/* )} */}

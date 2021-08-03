@@ -18,23 +18,12 @@ function Standing() {
     };
 
     return (
-        // <Grid container direction="row" justifyContent="space-evenly" alignItems="center">
-
-        //         <Typography variant="h2" style={standing}>Indayog 2021 Cluster Standing</Typography>
-        //         <Charts />
-        //         <hr/>
-        //         <Typography variant="h2" style={judging}>Judging Updates</Typography>
-
-        // </Grid>
-
-        <div className="home_chart">
-            {/* <Button onClick={() => displayGreeting(a => !a)}> */}
-            {/* <Typography variant="h2" style={standing}>Indayog 2021 Cluster Standing</Typography> */}
-            {/* </Button> */}
-            <Charts />
-            <hr />
-
-            <Grid container direction="column" justifyContent="space-evenly" alignItems="center">
+        <Grid container direction="row" justifyContent="center" alignItems="stretch" spacing={1}>
+            <Grid direction="row" item xs={12} sm={6}>
+                <Charts />
+            </Grid>
+            <hr/>
+            <Grid direction="row" item xs={12} sm={6}>
                 <Typography variant="h2" style={judging}>
                     Judging Updates
                 </Typography>
@@ -45,8 +34,26 @@ function Standing() {
                 })}
             </Grid>
             
+        </Grid>
 
-        </div>
+        // <div className="home_chart">
+        //     {/* <Button onClick={() => displayGreeting(a => !a)}> */}
+        //     {/* <Typography variant="h2" style={standing}>Indayog 2021 Cluster Standing</Typography> */}
+        //     {/* </Button> */}
+        //     <Charts />
+        //     <hr  style={{ transform: "rotate(270deg)" }} />
+
+        //     <Grid container direction="column" justifyContent="space-evenly" alignItems="center">
+        //         <Typography variant="h2" style={judging}>
+        //             Judging Updates
+        //         </Typography>
+        //         {judgingData.map((now) => {
+        //             return (
+        //                 <Event img={now.img} key={now.id} alt={now.alt} link={now.link} />
+        //             )
+        //         })}
+        //     </Grid>
+        // </div>
     );
 }
 

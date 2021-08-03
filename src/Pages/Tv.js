@@ -22,7 +22,12 @@ const useStyles = makeStyles((theme) => ({
         minHeight: '100vh',
         backgroundColor: '#DB6A96',
         padding: theme.spacing(4)
-    }
+    },
+    body:{
+        color:"#FFFFFF",
+        fontFamily:"Monteserrat",
+    },
+    
 }));
 
 function Tv({ forwardedRef }) {
@@ -33,7 +38,7 @@ function Tv({ forwardedRef }) {
                 <Grid className={classes.leftContainer} container direction="column" justifyContent="center" alignItems="center">
                     <img src="/assets/Logo/Samahan TV Logo@4x.png" style={{ width:"50%" }} alt="martin Hall" />
                     <Grid>
-                        <Typography variant="p">SAMAHAN TV is an initiative for the upcoming 73rd Ateneo Fiesta for the purposes of information dissemination and to spark interest of Atenans to anticipate the biggest event in Ateneo. 
+                        <Typography className={classes.body} variant="p">SAMAHAN TV is an initiative for the upcoming 73rd Ateneo Fiesta for the purposes of information dissemination and to spark interest of Atenans to anticipate the biggest event in Ateneo. 
                     The Fiesta Segment will comprise of six (6) episodes highlighting different events and provide a general overview for the upcoming activities.</Typography>
                     </Grid>
                 </Grid>

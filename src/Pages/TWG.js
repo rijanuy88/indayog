@@ -47,7 +47,7 @@ function TWG({ forwardedRef }) {
                 </Typography>
             </Grid>
             <Grid item>
-                <Grid container justify="center" alignItems="center">
+                <Grid container justifyContent="flex-start" alignItems="flex-start">
                     {TwgData.map((twg) => {
                         return (
                             <Grid item xs={2}>
