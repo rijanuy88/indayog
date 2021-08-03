@@ -3,15 +3,28 @@ import React from 'react'
 import Cards from '../Components/Clusters/Cards'
 import { clustersData } from '../Components/Clusters/ClustersData'
 import Typography from '@material-ui/core/Typography';
+import { makeStyles } from "@material-ui/core/styles";
+import handleViewport from 'react-in-viewport';
 
-import './Clusters.css'
+const useStyles = makeStyles((theme) => ({
+    rootContainer: {
+        minHeight: '100vh',
+        padding: theme.spacing(4),
+        paddingTop: '4rem',
+        paddingBottom: '4rem',
+        backgroundImage: 'url("/assets/Backgrounds/Clusters BG.png")',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center'
+    },
+}));
 
-function Clusters() {
-    
+function Clusters({ forwardedRef }) {
+    const classes = useStyles();
+
     return (
-        <div className='clusters'>
-            <Grid container direction="row" justifyContent="center" alignItems="center" spacing={1}>
-                {/* <Grid item> */}
+        <Grid innerRef={forwardedRef} container direction="column" justifyContent="center" alignItems="center" spacing={1} className={classes.rootContainer}>
+            <Grid item>
+                <Grid container spacing={1}>
                     {clustersData.map((cluster) => {
                         return (
                             <Grid item>
@@ -19,16 +32,20 @@ function Clusters() {
                             </Grid>
                         )
                     })}
-                {/* </Grid> */}
-
-                <Grid item xs={12} container direction="column" justifyContent="center" alignItems="center">
-                    <Typography variant="h2" style={{color: '#C9C9C9',marginTop:"30px"}}>INDAYOG 2021 CLUSTERS</Typography>
-                    <Typography variant="h3" style={{color: '#FCBD6E', fontFamily:'america'}}>73rd Ateneo Fiesta</Typography>
                 </Grid>
             </Grid>
-            
-        </div>
+            <Grid item>
+                <Grid container direction="column" justifyContent="center" alignItems="center">
+                    <Grid item>
+                        <Typography variant="h2" style={{color: '#C9C9C9',marginTop:"30px"}}>INDAYOG 2021 CLUSTERS</Typography>
+                    </Grid>
+                    <Grid item>
+                        <Typography variant="h3" style={{color: '#FCBD6E', fontFamily:'america'}}>73rd Ateneo Fiesta</Typography>
+                    </Grid>
+                </Grid>
+            </Grid>
+        </Grid>
     )
 }
 
-export default Clusters
+export default handleViewport(Clusters)

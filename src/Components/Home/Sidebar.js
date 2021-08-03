@@ -3,84 +3,77 @@ import React from 'react'
 import Event from './Event'
 import { eventDataNext } from './eventDataNext'
 import { eventDataNow } from './eventDataNow'
-import './Sidebar.css'
 import Tweets from './Tweets'
 import Typography from '@material-ui/core/Typography';
+import { makeStyles } from "@material-ui/core/styles";
+import Paper from '@material-ui/core/Paper';
 
-function Sidebar() {
-
-    const now = {
+const useStyles = makeStyles((theme) => ({
+    now: {
         color:"#F78701",
         fontSize:"3.2vh",
         textAlign:"center",
         fontWeight:"400",
         marginBottom:"20px",
-    };
-    const next2 = {
+    },
+    next2: {
         color:"#545454",
         fontSize:"3.2vh",
         textAlign:"center",
         fontWeight:"400",
         marginBottom:"20px",
-    };
-
-    const grid = {
-        background: "#FFFFFF",
-        boxShadow: "5px 5px 5px rgba(0, 0, 0, 0.15)",
-        borderRadius: "20px",
+    },
+    bar: {
         // position: "absolute",
-        width: "42.7vh",
-        height: "52.6vh",
-        left: "107px",
-        top: "201.98px",
-        paddingLeft:"47px",
-        paddingRight:"77px"
-        
-    }
-    const bar = {
-        // position: "absolute",
-        width: "210px",
+        width: "100%",
         textAlign:"center",
         border: "1px solid #CECECE",
         marginBottom:"11px",
         
+    },
+    cardContainer: {
+        borderRadius: 26,
+        backgroundColor: 'white',
+        padding: theme.spacing(4)
     }
+}));
+
+function Sidebar() {
+    const classes = useStyles();
 
 
     return (
         <>
-        <Grid style={grid} direction="column" container wrap="nowrap" spacing={2} >
+        <Grid direction="column" container wrap="nowrap" spacing={2} >
             <Grid item>
-                <Typography variant="h3" style={now}>Now Happening</Typography>
-                {eventDataNow.map((now) => {
-                    return (
-                        <Event img={now.img} key={now.id} alt={now.alt} link={now.link} />
-                    )
-                })}
+                <Paper className={classes.cardContainer}>
+                    <Grid container direction="column" spacing={2}>
+                        <Grid item>
+                            <Typography variant="h3" className={classes.now}>Now Happening</Typography>
+                            {eventDataNow.map((now) => {
+                                return (
+                                    <Event img={now.img} key={now.id} alt={now.alt} link={now.link} />
+                                )
+                            })}
+                        </Grid>
+                        <Grid item>
+                            <hr className={classes.bar}/>
+                            <Typography variant="h3" className={classes.next2}>Up Next</Typography>
+                            {eventDataNext.map((next) => {
+                                return (
+                                    <Event img={next.img} key={next.id} alt={next.alt} link={next.link} />
+                                )
+                            })}
+                        </Grid>
+                    </Grid>
+                </Paper>
             </Grid>
             <Grid item>
-                <hr style={bar}/>
-                <Typography variant="h3" style={next2}>Up Next</Typography>
-                {eventDataNext.map((next) => {
-                    return (
-                        <Event img={next.img} key={next.id} alt={next.alt} link={next.link} />
-                    )
-                })}
+                {/* <h4>SAMAHAN Twitter Tweets</h4> */}
+                <Paper className={classes.cardContainer}>
+                    <Tweets />
+                </Paper>
             </Grid>
-            {/* <Grid item >
-                <hr />
-            </Grid>
-            <Grid item style={grid}>
-                <h4>SAMAHAN Twitter Tweets</h4>
-                <Tweets />
-            </Grid> */}
-        </Grid>
-        <Grid item >
-            <hr />
-        </Grid>
-        <Grid item style={grid}>
-            {/* <h4>SAMAHAN Twitter Tweets</h4> */}
-            <Tweets />
         </Grid>
         </>
 

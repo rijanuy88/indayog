@@ -1,37 +1,57 @@
 import React from 'react'
 import Episode from '../Components/SamahanTv/Episode'
-import logo from '../Assets/Logo/Samahan TV Logo@4x.png'
 import Typography from '@material-ui/core/Typography';
-import { tvData } from '../Components/SamahanTv/tvData'
-import './Tv.css'
+import { tvData } from '../Components/SamahanTv/tvData';
 import Grid from "@material-ui/core/Grid";
-import bg from "../Assets/Backgrounds/SAMAHAN TV BG.jpg";
+import { makeStyles } from "@material-ui/core/styles";
+import handleViewport from 'react-in-viewport';
 
-const right ={
-    backgroundImage:`url('../Assets/Backgrounds/SAMAHAN TV BG.jpg')`,
-}
+const useStyles = makeStyles((theme) => ({
+    leftContainer: {
+        minHeight: '100vh',
+        padding: theme.spacing(4),
+        paddingTop: '4rem',
+        paddingBottom: '4rem',
+        backgroundImage: 'url("/assets/Backgrounds/SAMAHAN TV BG.png")',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        width: '100%',
+        height: '100%'
+    },
+    rightContainer: {
+        minHeight: '100vh',
+        backgroundColor: '#DB6A96',
+        padding: theme.spacing(4)
+    }
+}));
 
-function Tv() {
+function Tv({ forwardedRef }) {
+    const classes = useStyles();
     return (
-        <Grid container direction="row" justifyContent="space-between" alignItems="flex-start">
-            <Grid style={{ backgroundImage: `url(${bg})` }} container direction="column" justifyContent="center" alignItems="center" xs={6}>
-                <img src={logo} style={{width:"50%",height:"50%" }} alt="martin Hall" />
-                <Grid>
-                    <Typography variant="p">SAMAHAN TV is an initiative for the upcoming 73rd Ateneo Fiesta for the purposes of information dissemination and to spark interest of Atenans to anticipate the biggest event in Ateneo. 
-                The Fiesta Segment will comprise of six (6) episodes highlighting different events and provide a general overview for the upcoming activities.</Typography>
+        <Grid container direction="row" innerRef={forwardedRef}>
+            <Grid item xs={12} md={8}>
+                <Grid className={classes.leftContainer} container direction="column" justifyContent="center" alignItems="center">
+                    <img src="/assets/Logo/Samahan TV Logo@4x.png" style={{ width:"50%" }} alt="martin Hall" />
+                    <Grid>
+                        <Typography variant="p">SAMAHAN TV is an initiative for the upcoming 73rd Ateneo Fiesta for the purposes of information dissemination and to spark interest of Atenans to anticipate the biggest event in Ateneo. 
+                    The Fiesta Segment will comprise of six (6) episodes highlighting different events and provide a general overview for the upcoming activities.</Typography>
+                    </Grid>
                 </Grid>
-                
             </Grid>
-            <Grid style={{backgroundColor: '#DB6A96'}} xs={6} container direction="column" justifyContent="space-between" alignItems="flex-start">
-                <Typography variant="h3" style={{color: '#FFFF', fontFamily:'america'}}>Episode List</Typography>
-                {tvData.map((tv) => {
-                        return (
-                            // <Episode img={tv.img} alt={tv.alt} episode={tv.episode} description={tv.description} />
-                            <Episode key={tv.id} embedId={tv.embedId} episode={tv.episode} description={tv.description} />
-                        )
-                    })}
+            <Grid item xs={12} md={4}>
+                <Grid className={classes.rightContainer} container direction="column" justifyContent="space-between" alignItems="flex-start">
+                    <Typography variant="h3" style={{ color: '#FFFF', fontFamily:'america' }}>Episode List</Typography>
+                    <Grid container direction="column" spacing={4}>
+                        {tvData.map((tv) => {
+                            return (
+                                <Grid item>
+                                    <Episode key={tv.id} embedId={tv.embedId} episode={tv.episode} description={tv.description} />
+                                </Grid>
+                            )
+                        })}
+                    </Grid>
+                </Grid>
             </Grid>
-
         </Grid>
 
         // <div className='tv'>
@@ -57,4 +77,4 @@ function Tv() {
     )
 }
 
-export default Tv
+export default handleViewport(Tv)

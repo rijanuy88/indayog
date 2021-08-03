@@ -3,7 +3,7 @@ import { Timeline } from 'react-twitter-widgets'
 
 function Tweets() {
     return (
-        <div>
+        <div style={{ width: '100%' }}>
             {/* // Timeline (with options) */}
             <Timeline
             dataSource={{
@@ -12,7 +12,7 @@ function Tweets() {
             }}
             options={{
                 height: '46vh',
-                width: "60vh",
+                width: "100vh",
                 // theme: "dark",
             }}
             />

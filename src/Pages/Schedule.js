@@ -1,12 +1,27 @@
 import React from 'react'
-import './Schedule.css'
 import Typography from '@material-ui/core/Typography';
 import { Grid } from '@material-ui/core';
 import Buttons from '../Components/Buttons';
+import { makeStyles } from "@material-ui/core/styles";
+import handleViewport from 'react-in-viewport';
 
-function Schedule() {
+const useStyles = makeStyles((theme) => ({
+    rootContainer: {
+        minHeight: '100vh',
+        padding: theme.spacing(4),
+        paddingTop: '4rem',
+        paddingBottom: '4rem',
+        backgroundImage: 'url("/assets/Backgrounds/Schedule BG.png")',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center'
+    },
+}));
+
+function Schedule({ forwardedRef }) {
+    const classes = useStyles();
+
     return (
-        <Grid >
+        <Grid innerRef={forwardedRef} className={classes.rootContainer}>
             
         </Grid>
 
@@ -29,4 +44,4 @@ function Schedule() {
     )
 }
 
-export default Schedule
+export default handleViewport(Schedule)

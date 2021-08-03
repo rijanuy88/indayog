@@ -1,6 +1,12 @@
 import { createTheme } from "@material-ui/core";
 
 export default createTheme({
+    palette: {
+        background: '#f2f4f8',
+        secondary: {
+            main: '#ffffff'
+        }
+    },
     typography: {
         // inimport ko sila using your index.css
         fontFamily: ["Boldstrom", "Monteserrat", "America"].join(","),

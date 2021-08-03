@@ -1,26 +1,26 @@
 export const links = [
     {
-        id: 1,
+        id: 0,
         text: 'Home',
         url: '#home',
     },
     {
-        id: 2,
+        id: 1,
         text: 'Clusters',
         url: '#clusters',
     },
     {
-        id: 3,
+        id: 2,
         text: 'Schedule',
         url: '#schedule',
     },
     {
-        id: 4,
+        id: 3,
         text: 'SAMAHAN TV',
         url: '#samahanTv',
     },
     {
-        id: 5,
+        id: 4,
         text: 'Fiesta TWG',
         url: '#fiestaTWG',
     },

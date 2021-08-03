@@ -1,7 +1,6 @@
 import CardMedia from '@material-ui/core/CardMedia';
 import React from 'react'
 import { Card, CardActionArea, makeStyles } from '@material-ui/core';
-import './Cards.css'
 
 function Cards({img, alt,title,id}) {
     const handleClick = (e) => {

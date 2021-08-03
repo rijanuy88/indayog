@@ -1,9 +1,6 @@
 // https://www.npmjs.com/package/react-apexcharts
 import React from "react";
-import "./Home.css";
 import Sidebar from "../Components/Home/Sidebar";
-import "react-image-gallery/styles/css/image-gallery.css";
-import Charts from "../Components/Home/Charts";
 import Carousel from "react-material-ui-carousel";
 import { ImgGal } from "../Components/Home/ImgGal";
 import Card from "@material-ui/core/Card";
@@ -13,16 +10,33 @@ import Typography from "@material-ui/core/Typography";
 import Standing from "../Components/Home/Standing";
 
 import { useSpring, animated as a } from "react-spring";
+import useWindowDimensions from "../Utils/useWindowDimensions";
 import { Button } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
+import handleViewport from 'react-in-viewport';
 
-const useStyles = makeStyles(() => ({
+const useStyles = makeStyles((theme) => ({
+    rootContainer: {
+        minHeight: '100vh',
+        padding: theme.spacing(4),
+        paddingTop: '4rem',
+        paddingBottom: '4rem',
+        backgroundImage: 'url("/assets/Backgrounds/Home BG.png")',
+        backgroundSize: 'cover',
+        backgroundPosition: 'center'
+    },
     box: {
         position: "absolute",
         backgroundColor: "white",
         borderRadius: "26px 0 0 26px",
-        height:"100%",
+        height: "100%",
+        top: 0,
     },
+    standing: {
+        color: "#D51E49",
+        fontFamily: "boldstrom",
+        width: "100%",
+    }
 }));
 
 function Image(props) {
@@ -40,30 +54,23 @@ function Image(props) {
     );
 }
 
-function Home() {
+function Home({ forwardedRef }) {
     const classes = useStyles();
-    const standing = {
-        color: "#D51E49",
-        transform: "rotate(270deg)",
-        fontFamily: "boldstrom",
-        width: "100%",
-    };
 
-    
+    const { width } = useWindowDimensions();
 
     const [greetingStatus, displayGreeting] = React.useState(false);
 
     const contentProps = useSpring({
         //opacity: greetingStatus ? 1 : 0,
         // marginTop: greetingStatus ? 0 : -500
-        right: greetingStatus ? 0 : -1400,
-    
+        left: greetingStatus ? 200 : width - 200,
     });
 
     return (
-        <div>
+        <div className={classes.rootContainer} ref={forwardedRef}>
             <Grid
-                style={{ width: "100%", margin: 0 }}
+                style={{ width: "100%", margin: 0, position: 'relative' }}
                 container
                 spacing={2}
                 justifyContent="space-around"
@@ -71,7 +78,7 @@ function Home() {
                 <Grid item xs={4} md={2}>
                     <Sidebar />
                 </Grid>
-                <Grid item xs={4} md={6}>
+                <Grid item xs={4} md={8}>
                     <Carousel autoPlay>
                         {ImgGal.map((img, i) => (
                             <Image item={img} key={i} />
@@ -98,8 +105,10 @@ function Home() {
                             <Grid item xs={2}>
                                 <Button
                                     onClick={() => displayGreeting(a => !a)}
+                                    style={{ transform: "rotate(270deg)" }}
+                                    fullWidth
                                 >
-                                    <Typography variant="h4" style={standing}>
+                                    <Typography variant="h4" className={classes.standing}>
                                         Indayog 2021 Cluster Standing
                                     </Typography>
                                 </Button>
@@ -125,4 +134,4 @@ function Home() {
     );
 }
 
-export default Home;
+export default handleViewport(Home);

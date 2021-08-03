@@ -1,20 +1,25 @@
 import React from 'react'
-import './Episode.css'
 import Youtube from './Youtube'
 import Typography from '@material-ui/core/Typography';
+import Grid from '@material-ui/core/Grid';
 
-function Episode({embedId,episode,description}) {
+function Episode({ embedId, episode, description }) {
     return (
-        <div className='episode'>
-            <div className="episode_left">
-                {/* <img src={img} alt={alt} /> */}
+        <Grid container>
+            <Grid item xs>
                 <Youtube embedId={embedId} />
-            </div>
-            <div className="episode_right">
-                <Typography variant="h2">{episode}</Typography>
-                <Typography variant="h3">{description}</Typography>
-            </div>
-        </div>
+            </Grid>
+            <Grid item xs>
+                <Grid container direction="column">
+                    <Grid item>
+                        <Typography variant="h4">{episode}</Typography>
+                    </Grid>
+                    <Grid item>
+                        <Typography>{description}</Typography>
+                    </Grid>
+                </Grid>
+            </Grid>
+        </Grid>
     )
 }
 

@@ -1,16 +1,13 @@
-import twg1 from '../../Assets/Photos/TWG/1.jpg'
-import twg2 from '../../Assets/Photos/TWG/2.JPG'
-// import twg3 from '../../Assets/Photos/TWG/3.jpg'
 export const eventDataNext = [
     {
         id:1,
-        img: `${twg1}`,
+        img: '/assets/Photos/TWG/1.jpg',
         alt: "Ignatian Cup Quarterfinals",
         link: "Via Discord",
     },
     {
         id:2,
-        img: `${twg2}`,
+        img: '/assets/Photos/TWG/2.jpg',
         alt: "Creative Series: Short Film",
         link: "Via Facebook",
     },

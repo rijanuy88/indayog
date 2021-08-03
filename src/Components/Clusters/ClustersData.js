@@ -1,60 +1,49 @@
-
-import cluster1 from '../../Assets/Photos/Avatars/ACC.png'
-import cluster2 from '../../Assets/Photos/Avatars/BM.png'
-import cluster3 from '../../Assets/Photos/Avatars/CS.png'
-import cluster4 from '../../Assets/Photos/Avatars/HUMLET.png'
-import cluster5 from '../../Assets/Photos/Avatars/SOE-NSM.png'
-import cluster6 from '../../Assets/Photos/Avatars/SEA.png'
-import cluster7 from '../../Assets/Photos/Avatars/SON.png'
-import cluster8 from '../../Assets/Photos/Avatars/SS.png'
-
-
 export const clustersData = [
     {
         id:1,
-        img: cluster1,
+        img: '/assets/Photos/Avatars/ACC.png',
         alt:"ACC",
         title:'Accountancy',
     },
     {
         id:2,
-        img:cluster2,
+        img: '/assets/Photos/Avatars/BM.png',
         alt:"BM", 
         title :'Business & Management',
     },
     {
         id:3,
-        img:cluster3, 
+        img: '/assets/Photos/Avatars/CS.png', 
         alt:"CS",
         title :'Computer Studies',
     },
     {
         id:4,
-        img:cluster4,
+        img: '/assets/Photos/Avatars/HUMLET.png',
         alt:"HumLet",
         title :'Humanities & Letters',
     },
     {
         id:5,
-        img:cluster5,
+        img: '/assets/Photos/Avatars/SOE-NSM.png',
         alt:"NSM", 
         title :'Natural Sciences & Mathematics',
     },
     {
         id:6,
-        img:cluster6,
+        img: '/assets/Photos/Avatars/SEA.png',
         alt:"SEA", 
         title :'School of Engineering & Architecture',
     },
     {
         id:7,
-        img:cluster7,
+        img: '/assets/Photos/Avatars/SON.png',
         alt:"SON",
         title :'School of Nursing',
     },
     {
         id:8,
-        img:cluster8,
+        img: '/assets/Photos/Avatars/SS.png',
         alt:"SS", 
         title :'Social Sciences',
     },
