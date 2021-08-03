@@ -49,12 +49,15 @@ function Home() {
         width: "100%",
     };
 
+    
+
     const [greetingStatus, displayGreeting] = React.useState(false);
 
     const contentProps = useSpring({
         //opacity: greetingStatus ? 1 : 0,
         // marginTop: greetingStatus ? 0 : -500
         right: greetingStatus ? 0 : -1400,
+    
     });
 
     return (

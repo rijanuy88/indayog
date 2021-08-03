@@ -79,7 +79,7 @@ function Sidebar() {
             <hr />
         </Grid>
         <Grid item style={grid}>
-            <h4>SAMAHAN Twitter Tweets</h4>
+            {/* <h4>SAMAHAN Twitter Tweets</h4> */}
             <Tweets />
         </Grid>
         </>

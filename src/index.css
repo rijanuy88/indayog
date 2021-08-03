@@ -245,13 +245,13 @@ a {
   background-clip: padding-box;
 }
 
-.schedule {
+/* .schedule { */
   /* background: #ffd1ba; */
-  background-image: url('./Assets/Backgrounds/Schedule\ BG.jpg');
+  /* background-image: url('./Assets/Backgrounds/Schedule\ BG.jpg');
   background-size: cover;
   background-position: center;
-  background-clip: padding-box;
-}
+  background-clip: padding-box; */
+/* } */
 
 .samahanTv {
   /* background-image: url('./Assets/Backgrounds/SAMAHAN\ TV\ BG.jpg'); */
