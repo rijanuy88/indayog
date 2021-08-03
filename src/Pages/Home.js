@@ -64,7 +64,8 @@ function Home({ forwardedRef }) {
     const contentProps = useSpring({
         //opacity: greetingStatus ? 1 : 0,
         // marginTop: greetingStatus ? 0 : -500
-        left: greetingStatus ? 200 : width - 200,
+        // left: greetingStatus ? 200 : width - 200,
+        left: greetingStatus ? 20 : width - 200,
     });
 
     return (

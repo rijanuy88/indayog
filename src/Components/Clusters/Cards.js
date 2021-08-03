@@ -19,6 +19,10 @@ function Cards({img, alt,title,id}) {
             width: 134,
             height:567,
             
+            '&:hover': {
+                transform:"scale(1.08)",
+                opacity:"1"
+            }
         },
     });
 
@@ -27,8 +31,8 @@ function Cards({img, alt,title,id}) {
         <div className="cards">
             <Card className={classes.root} id='card' onClick={handleClick}>
                 {/* <h4>{title}</h4> */}
-                <CardActionArea>
-                    <CardMedia
+                <CardActionArea >
+                    <CardMedia 
                         component="img"
                         alt={alt}
                         id={id}

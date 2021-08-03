@@ -1,6 +1,8 @@
 import { Button, Grid, Typography } from "@material-ui/core";
 import React from "react";
 import Charts from "./Charts";
+import Event from "./Event";
+import { judgingData } from './judgingData.js'
 
 function Standing() {
     const standing = {
@@ -31,9 +33,19 @@ function Standing() {
             {/* </Button> */}
             <Charts />
             <hr />
-            <Typography variant="h2" style={judging}>
-                Judging Updates
-            </Typography>
+
+            <Grid container direction="column" justifyContent="space-evenly" alignItems="center">
+                <Typography variant="h2" style={judging}>
+                    Judging Updates
+                </Typography>
+                {judgingData.map((now) => {
+                    return (
+                        <Event img={now.img} key={now.id} alt={now.alt} link={now.link} />
+                    )
+                })}
+            </Grid>
+            
+
         </div>
     );
 }
