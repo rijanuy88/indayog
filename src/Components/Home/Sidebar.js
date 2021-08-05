@@ -11,16 +11,14 @@ import Paper from '@material-ui/core/Paper';
 const useStyles = makeStyles((theme) => ({
     now: {
         color:"#F78701",
-        fontSize:"3.2vh",
         textAlign:"center",
-        fontWeight:"400",
+        fontStyle: 'boldstrom',
         marginBottom:"20px",
     },
     next2: {
         color:"#545454",
-        fontSize:"3.2vh",
         textAlign:"center",
-        fontWeight:"400",
+        fontStyle: 'boldstrom',
         marginBottom:"20px",
     },
     bar: {
@@ -38,7 +36,7 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
 
-function Sidebar() {
+function Sidebar({ maxHeight }) {
     const classes = useStyles();
 
 
@@ -49,7 +47,7 @@ function Sidebar() {
                 <Paper className={classes.cardContainer}>
                     <Grid container direction="column" spacing={2}>
                         <Grid item>
-                            <Typography variant="h3" className={classes.now}>Now Happening</Typography>
+                            <Typography variant="h4" className={classes.now}>Now Happening</Typography>
                             {eventDataNow.map((now) => {
                                 return (
                                     <Event img={now.img} key={now.id} alt={now.alt} link={now.link} />
@@ -58,7 +56,7 @@ function Sidebar() {
                         </Grid>
                         <Grid item>
                             <hr className={classes.bar}/>
-                            <Typography variant="h3" className={classes.next2}>Up Next</Typography>
+                            <Typography variant="h4" className={classes.next2}>Up Next</Typography>
                             {eventDataNext.map((next) => {
                                 return (
                                     <Event img={next.img} key={next.id} alt={next.alt} link={next.link} />

@@ -17,16 +17,12 @@ const useStyles = makeStyles({
 
 const via = {
     color:"#AAAAAA",
-    fontSize:"1.9vh",
-    fontWeight:"700",
-    fontFamily:"Monteserrat",
-    lineHeight:"2.4vh",
+    fontWeight: "700",
+    fontFamily: "Montserrat",
 };
 const name = {
-    fontSize:"2.4vh",
-    fontWeight:"800",
-    fontFamily:"Monteserrat",
-    lineHeight:"2.9vh",
+    fontWeight: 800,
+    fontFamily: "Montserrat",
 };
 
 
@@ -35,14 +31,14 @@ function Event({img, alt, link}) {
     const classes = useStyles();
     return (
         <div className='event'>
-            <Grid container wrap="nowrap" spacing={2}>
+            <Grid container wrap="nowrap" spacing={1}>
                 <Grid item>
                     <img className={classes.image} src={img} alt={alt}/>
                 </Grid>
-                <Grid item>
+                <Grid item xs>
                     <Grid className={classes.details} direction="column" container wrap="nowrap" spacing={0} >
-                        <Typography variant="h4" style={name}>{alt}</Typography>
-                        <Typography variant="h5" style={via}>{link}</Typography>
+                        <Typography variant="h5" style={name}>{alt}</Typography>
+                        <Typography variant="h6" style={via}>{link}</Typography>
                     </Grid>
                 </Grid>
             </Grid>

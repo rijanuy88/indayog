@@ -1,6 +1,6 @@
 import React from 'react'
 import CardMedia from '@material-ui/core/CardMedia';
-import { Card, CardActionArea, makeStyles } from '@material-ui/core';
+import { CardActionArea, makeStyles } from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
 
 import Grid from '@material-ui/core/Grid';
@@ -48,12 +48,12 @@ function Profiles({img, alt, name,position}) {
                                 image={img}
                                 title={name}
                             />
-                    </CardActionArea>
+                        </CardActionArea>
                     </Grid>
 
-                    <Grid item xs>
-                            <Typography variant="h5">{name}</Typography>
-                            <Typography variant="body1">{position}</Typography>
+                    <Grid item xs style={{ textAlign: 'center', color: 'white' }}>
+                        <Typography variant="h5" style={{ fontStyle: "montserrat", fontWeight: 700 }}>{name}</Typography>
+                        <Typography variant="h6" style={{ fontStyle: "montserrat" }}>{position}</Typography>
                     </Grid>
                 </Grid>
             {/* </Paper> */}

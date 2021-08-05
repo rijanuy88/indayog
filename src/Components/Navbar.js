@@ -74,7 +74,7 @@ const Navbar = ({ tabValue, setTabValue }) => {
                     >
                         { links.map((link, i) => (
                             <Tab label={
-                                <Typography variant="h5" style={{ fontStyle: 'Montserrat' }}>{link.text}</Typography>
+                                <Typography variant="h5" style={{ fontStyle: 'Montserrat', fontWeight: 700, textTransform: 'none' }}>{link.text}</Typography>
                             } onClick={() => handleClickLink(i)} />
                         )) }
                     </Tabs>

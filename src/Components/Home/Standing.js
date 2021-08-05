@@ -1,4 +1,4 @@
-import { Button, Grid, Typography } from "@material-ui/core";
+import { Grid, Typography } from "@material-ui/core";
 import React from "react";
 import Charts from "./Charts";
 import Event from "./Event";
@@ -8,7 +8,7 @@ function Standing() {
     const judging = {
         color: "#661693",
         fontFamily: "boldstrom",
-        fontSize: "3.18vh",
+        marginBottom: '2rem'
     };
 
     return (
@@ -24,17 +24,23 @@ function Standing() {
                }} />
             </Grid>
             <Grid item xs>
-                <Typography variant="h2" style={judging}>
-                    Judging Updates
-                </Typography>
-                <Grid container direction="column" spacing={2}>
-                    {judgingData.map((now) => {
-                        return (
-                            <Grid item>
-                                <Event img={now.img} key={now.id} alt={now.alt} link={now.link} />
-                            </Grid>
-                        )
-                    })}
+                <Grid container direction="column" justify="center" alignItems="center">
+                    <Grid item>
+                        <Typography variant="h4" style={judging}>
+                            Judging Updates
+                        </Typography>
+                    </Grid>
+                    <Grid item>
+                        <Grid container direction="column" spacing={2}>
+                            {judgingData.map((now) => {
+                                return (
+                                    <Grid item>
+                                        <Event img={now.img} key={now.id} alt={now.alt} link={now.link} />
+                                    </Grid>
+                                )
+                            })}
+                        </Grid>
+                    </Grid>
                 </Grid>
             </Grid>
         </Grid>

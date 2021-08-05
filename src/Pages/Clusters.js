@@ -37,10 +37,10 @@ function Clusters({ forwardedRef }) {
             <Grid item>
                 <Grid container direction="column" justifyContent="center" alignItems="center">
                     <Grid item>
-                        <Typography variant="h2" style={{color: '#C9C9C9',marginTop:"30px"}}>INDAYOG 2021 CLUSTERS</Typography>
+                        <Typography variant="h1" style={{ color: '#C9C9C9', marginTop:"30px" }}>INDAYOG 2021 CLUSTERS</Typography>
                     </Grid>
                     <Grid item>
-                        <Typography variant="h3" style={{color: '#FCBD6E', fontFamily:'america'}}>73rd Ateneo Fiesta</Typography>
+                        <Typography variant="h2" style={{ color: '#FCBD6E', fontFamily:'america' }}>73rd Ateneo Fiesta</Typography>
                     </Grid>
                 </Grid>
             </Grid>

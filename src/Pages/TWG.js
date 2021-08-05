@@ -2,7 +2,7 @@ import React from 'react'
 import Profiles from '../Components/Twg/Profiles'
 import { TwgData } from '../Components/Twg/TwgData'
 import Typography from '@material-ui/core/Typography';
-import { Button, Grid } from '@material-ui/core';
+import { Paper, Grid } from '@material-ui/core';
 import Gradient from 'rgt'
 import { makeStyles } from "@material-ui/core/styles";
 import handleViewport from 'react-in-viewport';
@@ -18,16 +18,9 @@ const useStyles = makeStyles((theme) => ({
         backgroundPosition: 'center'
     },
     buttonStyle: {
-        background:"white",
-        fontSize:"2rem",
-        padding: "10px",
-        alignItems:"center",
-        paddingLeft:"20px",
-        paddingRight:"20px",
-        color: "linear-gradient(to right, #CC2552 0%, #661693 100%)",
-        borderRadius:"20px",
-        marginBottom:"20px",
-        marginLeft:"20px",
+        borderRadius: 26,
+        backgroundColor: 'white',
+        padding: theme.spacing(2)
     }
 }));
 
@@ -35,19 +28,33 @@ function TWG({ forwardedRef }) {
     const classes = useStyles();
 
     return (
-        <Grid container direction="column" alignItems="center" className={classes.rootContainer} innerRef={forwardedRef}>
+        <Grid container direction="column" alignItems="center" className={classes.rootContainer} innerRef={forwardedRef} spacing={8}>
             <Grid item>
-                <Typography variant="h1" style={{fontFamily:'america',fontSize:'3rem',marginBottom:"65px",color:'white'}}>
-                    Meet the Team Behind {' '}  
-                    <Button className={classes.buttonstyle}>
-                        <Gradient dir="right-to-left" from="#CC2552" to="#661693" >
-                            Indayog 2021
-                        </Gradient>
-                    </Button>
-                </Typography>
+                <Grid container wrap="nowrap" spacing={4} alignItems="center">
+                    <Grid item>
+                        <Typography variant="h2" style={{ fontFamily:'america', color:'white', marginTop: 25 }}>
+                            Meet the Team Behind
+                        </Typography>
+                    </Grid>
+                    <Grid item>
+                        <Paper className={classes.buttonStyle} elevation={0}>
+                            <Typography 
+                                variant="h4" 
+                                style={{ 
+                                    fontFamily: 'boldstrom',
+                                    background: "-webkit-linear-gradient(left, #CC2552, #661693)",
+                                    WebkitBackgroundClip: 'text',
+                                    WebkitTextFillColor: 'transparent'
+                                }}
+                            >
+                                Indayog 2021
+                            </Typography>
+                        </Paper>
+                    </Grid>
+                </Grid>
             </Grid>
             <Grid item>
-                <Grid container justifyContent="flex-start" alignItems="flex-start">
+                <Grid container justifyContent="flex-start" alignItems="flex-start" spacing={2}>
                     {TwgData.map((twg) => {
                         return (
                             <Grid item xs={2}>
