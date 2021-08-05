@@ -5,12 +5,6 @@ import Event from "./Event";
 import { judgingData } from './judgingData.js'
 
 function Standing() {
-    const standing = {
-        color: "#D51E49",
-        transform: "rotate(270deg)",
-        fontFamily: "boldstrom",
-        fontSize: "3.18vh",
-    };
     const judging = {
         color: "#661693",
         fontFamily: "boldstrom",
@@ -18,22 +12,31 @@ function Standing() {
     };
 
     return (
-        <Grid container direction="row" justifyContent="center" alignItems="stretch" spacing={1}>
-            <Grid direction="row" item xs={12} sm={6}>
+        <Grid container spacing={4} wrap="nowrap">
+            <Grid item xs>
                 <Charts />
             </Grid>
-            <hr/>
-            <Grid direction="row" item xs={12} sm={6}>
+            <Grid item>
+              <div style={{ 
+                  backgroundColor: '#AAAAAA',
+                  width: 1,
+                  height: '100%'
+               }} />
+            </Grid>
+            <Grid item xs>
                 <Typography variant="h2" style={judging}>
                     Judging Updates
                 </Typography>
-                {judgingData.map((now) => {
-                    return (
-                        <Event img={now.img} key={now.id} alt={now.alt} link={now.link} />
-                    )
-                })}
+                <Grid container direction="column" spacing={2}>
+                    {judgingData.map((now) => {
+                        return (
+                            <Grid item>
+                                <Event img={now.img} key={now.id} alt={now.alt} link={now.link} />
+                            </Grid>
+                        )
+                    })}
+                </Grid>
             </Grid>
-            
         </Grid>
 
         // <div className="home_chart">

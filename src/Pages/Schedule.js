@@ -7,7 +7,7 @@ import handleViewport from 'react-in-viewport';
 
 const useStyles = makeStyles((theme) => ({
     rootContainer: {
-        minHeight: '100vh',
+        minHeight: '120vh',
         padding: theme.spacing(4),
         paddingTop: '4rem',
         paddingBottom: '4rem',
