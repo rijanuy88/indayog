@@ -1,10 +1,10 @@
 import React from 'react';
-import Clusters from './Pages/Clusters';
 import Navbar from './Components/Navbar';
-import Home from './Pages/Home';
-import TWG from './Pages/TWG';
-import Schedule from './Pages/Schedule';
-import Tv from './Pages/Tv';
+const Clusters = React.lazy(() => import('./Pages/Clusters'));
+const Home = React.lazy(() => import('./Pages/Home'));
+const TWG = React.lazy(() => import('./Pages/TWG'));
+const Schedule = React.lazy(() => import('./Pages/Schedule'));
+const Tv = React.lazy(() => import('./Pages/Tv'));
 
 function App() {
     const [tabValue, setTabValue] = React.useState(0);
