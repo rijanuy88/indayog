@@ -27,8 +27,8 @@ function Clusters({ forwardedRef }) {
                 <Grid container spacing={1}>
                     {clustersData.map((cluster) => {
                         return (
-                            <Grid item>
-                                <Cards key={cluster.id} img={cluster.img} alt={cluster.alt} title={cluster.title} id={cluster.id} />
+                            <Grid item key={cluster.id}>
+                                <Cards img={cluster.img} alt={cluster.alt} title={cluster.title} id={cluster.id} />
                             </Grid>
                         )
                     })}

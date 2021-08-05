@@ -73,7 +73,7 @@ const Navbar = ({ tabValue, setTabValue }) => {
                         indicatorColor="secondary"
                     >
                         { links.map((link, i) => (
-                            <Tab label={
+                            <Tab key={`link-${i}`} label={
                                 <Typography variant="h5" style={{ fontStyle: 'Montserrat', fontWeight: 700, textTransform: 'none' }}>{link.text}</Typography>
                             } onClick={() => handleClickLink(i)} />
                         )) }

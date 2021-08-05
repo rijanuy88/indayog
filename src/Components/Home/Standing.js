@@ -34,8 +34,8 @@ function Standing() {
                         <Grid container direction="column" spacing={2}>
                             {judgingData.map((now) => {
                                 return (
-                                    <Grid item>
-                                        <Event img={now.img} key={now.id} alt={now.alt} link={now.link} />
+                                    <Grid item key={now.id}>
+                                        <Event img={now.img} alt={now.alt} link={now.link} />
                                     </Grid>
                                 )
                             })}

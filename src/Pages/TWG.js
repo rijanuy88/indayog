@@ -57,8 +57,8 @@ function TWG({ forwardedRef }) {
                 <Grid container justifyContent="flex-start" alignItems="flex-start" spacing={2}>
                     {TwgData.map((twg) => {
                         return (
-                            <Grid item xs={2}>
-                                <Profiles key={twg.id} img={twg.img} alt={twg.alt} name={twg.name} position={twg.position} />
+                            <Grid key={twg.id} item xs={2}>
+                                <Profiles img={twg.img} alt={twg.alt} name={twg.name} position={twg.position} />
                             </Grid>
                         )
                     })}

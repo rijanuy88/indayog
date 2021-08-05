@@ -69,8 +69,8 @@ function Tv({ forwardedRef }) {
                         <Grid container direction="column" spacing={4}>
                             {tvData.map((tv) => {
                                 return (
-                                    <Grid item>
-                                        <Episode key={tv.id} embedId={tv.embedId} episode={tv.episode} description={tv.description} />
+                                    <Grid item key={tv.id}>
+                                        <Episode embedId={tv.embedId} episode={tv.episode} description={tv.description} />
                                     </Grid>
                                 )
                             })}
